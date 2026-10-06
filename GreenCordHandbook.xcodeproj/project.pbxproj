@@ -1,0 +1,768 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	rootObject = D006D85A7F4FECF89D7A7CD3 /* Project object */;
+	objects = {
+		C0E06897B8323E2790690755 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "AppModel.swift"; path = "GreenCordHandbook/AppModel.swift"; sourceTree = "<group>"; };
+		85895E99B6873B92440CE79B /* AppModel.swift in app */ = {isa = PBXBuildFile; fileRef = C0E06897B8323E2790690755 /* AppModel.swift */; };
+		668F2185013FC4AB729AF1E2 /* GreenCordAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "GreenCordAPI.swift"; path = "GreenCordHandbook/Backend/GreenCordAPI.swift"; sourceTree = "<group>"; };
+		1147AE81C09F064DB476FA9B /* GreenCordAPI.swift in app */ = {isa = PBXBuildFile; fileRef = 668F2185013FC4AB729AF1E2 /* GreenCordAPI.swift */; };
+		7785A4DE82CF3A0E34621B6D /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "LocalStore.swift"; path = "GreenCordHandbook/Backend/LocalStore.swift"; sourceTree = "<group>"; };
+		E986F4A3D93E0A607B31A5C7 /* LocalStore.swift in app */ = {isa = PBXBuildFile; fileRef = 7785A4DE82CF3A0E34621B6D /* LocalStore.swift */; };
+		F1EE78D576B678DF6E12B24E /* RemoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "RemoteAPI.swift"; path = "GreenCordHandbook/Backend/RemoteAPI.swift"; sourceTree = "<group>"; };
+		33D52D3629C6CB2B72551A6B /* RemoteAPI.swift in app */ = {isa = PBXBuildFile; fileRef = F1EE78D576B678DF6E12B24E /* RemoteAPI.swift */; };
+		3FE70940D11AE14F2759AF91 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "SessionStore.swift"; path = "GreenCordHandbook/Backend/SessionStore.swift"; sourceTree = "<group>"; };
+		667E75ED619431B18EB5A04B /* SessionStore.swift in app */ = {isa = PBXBuildFile; fileRef = 3FE70940D11AE14F2759AF91 /* SessionStore.swift */; };
+		1BF7E3263131316798463F1A /* SyncEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "SyncEngine.swift"; path = "GreenCordHandbook/Backend/SyncEngine.swift"; sourceTree = "<group>"; };
+		671403A624E28EE92C1C5FEF /* SyncEngine.swift in app */ = {isa = PBXBuildFile; fileRef = 1BF7E3263131316798463F1A /* SyncEngine.swift */; };
+		2C7418718109E7EAF0822988 /* ContentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "ContentStore.swift"; path = "GreenCordHandbook/Content/ContentStore.swift"; sourceTree = "<group>"; };
+		0FFD42AE3405B35ADADD73AE /* ContentStore.swift in app */ = {isa = PBXBuildFile; fileRef = 2C7418718109E7EAF0822988 /* ContentStore.swift */; };
+		EA18F980EBFC497B67FCEBCC /* ContentUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "ContentUpdater.swift"; path = "GreenCordHandbook/Content/ContentUpdater.swift"; sourceTree = "<group>"; };
+		1FD8AA1C513E75265ED0E479 /* ContentUpdater.swift in app */ = {isa = PBXBuildFile; fileRef = EA18F980EBFC497B67FCEBCC /* ContentUpdater.swift */; };
+		AF1EF3B9D049783B86D0B13B /* CSVExport.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "CSVExport.swift"; path = "GreenCordHandbook/Export/CSVExport.swift"; sourceTree = "<group>"; };
+		312C9EBB6A2194218AED720E /* CSVExport.swift in app */ = {isa = PBXBuildFile; fileRef = AF1EF3B9D049783B86D0B13B /* CSVExport.swift */; };
+		67700D3654B7438ED0A6F85A /* GreenCordHandbookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "GreenCordHandbookApp.swift"; path = "GreenCordHandbook/GreenCordHandbookApp.swift"; sourceTree = "<group>"; };
+		D54CA2D446906B1569D9D150 /* GreenCordHandbookApp.swift in app */ = {isa = PBXBuildFile; fileRef = 67700D3654B7438ED0A6F85A /* GreenCordHandbookApp.swift */; };
+		ACD651FC91F8A438D7CFA1DE /* Handbook.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "Handbook.swift"; path = "GreenCordHandbook/Model/Handbook.swift"; sourceTree = "<group>"; };
+		28DCBE60A36A389ED8C494FC /* Handbook.swift in app */ = {isa = PBXBuildFile; fileRef = ACD651FC91F8A438D7CFA1DE /* Handbook.swift */; };
+		CEFEF65BE4EF46356A18870B /* HourEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "HourEntry.swift"; path = "GreenCordHandbook/Model/HourEntry.swift"; sourceTree = "<group>"; };
+		2253F47A329460E2D48E7805 /* HourEntry.swift in app */ = {isa = PBXBuildFile; fileRef = CEFEF65BE4EF46356A18870B /* HourEntry.swift */; };
+		60AFE31D30CB773C73A8554F /* ProgressSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "ProgressSummary.swift"; path = "GreenCordHandbook/Model/ProgressSummary.swift"; sourceTree = "<group>"; };
+		5DBF3B7B3492C673BEF59FEC /* ProgressSummary.swift in app */ = {isa = PBXBuildFile; fileRef = 60AFE31D30CB773C73A8554F /* ProgressSummary.swift */; };
+		253912314B0074A6539C59F0 /* Requirements.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "Requirements.swift"; path = "GreenCordHandbook/Model/Requirements.swift"; sourceTree = "<group>"; };
+		DFC3B6762F51BE6DE47A5E44 /* Requirements.swift in app */ = {isa = PBXBuildFile; fileRef = 253912314B0074A6539C59F0 /* Requirements.swift */; };
+		C1DA7EA6CA3678AC31E8CDE8 /* DeadlineScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "DeadlineScheduler.swift"; path = "GreenCordHandbook/Notifications/DeadlineScheduler.swift"; sourceTree = "<group>"; };
+		640BEEF6483796344A899A1D /* DeadlineScheduler.swift in app */ = {isa = PBXBuildFile; fileRef = C1DA7EA6CA3678AC31E8CDE8 /* DeadlineScheduler.swift */; };
+		CFBB6AB0912391B9E66BDF04 /* SearchIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "SearchIndex.swift"; path = "GreenCordHandbook/Search/SearchIndex.swift"; sourceTree = "<group>"; };
+		E28D217BE5DBF567B329CCC1 /* SearchIndex.swift in app */ = {isa = PBXBuildFile; fileRef = CFBB6AB0912391B9E66BDF04 /* SearchIndex.swift */; };
+		659FFEF2DA323999A18D725F /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "Brand.swift"; path = "GreenCordHandbook/Theme/Brand.swift"; sourceTree = "<group>"; };
+		75DFB16BCCC4BE38F14DFD97 /* Brand.swift in app */ = {isa = PBXBuildFile; fileRef = 659FFEF2DA323999A18D725F /* Brand.swift */; };
+		02B2DBC0016A7BBC1902F14D /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "AccountView.swift"; path = "GreenCordHandbook/Views/AccountView.swift"; sourceTree = "<group>"; };
+		4A5EB9777F4614EB4B32FE5F /* AccountView.swift in app */ = {isa = PBXBuildFile; fileRef = 02B2DBC0016A7BBC1902F14D /* AccountView.swift */; };
+		6DE4831D264497DF6D8EDE02 /* CounselorHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "CounselorHomeView.swift"; path = "GreenCordHandbook/Views/CounselorHomeView.swift"; sourceTree = "<group>"; };
+		170BA416AE5EF6FE1E6BC7DD /* CounselorHomeView.swift in app */ = {isa = PBXBuildFile; fileRef = 6DE4831D264497DF6D8EDE02 /* CounselorHomeView.swift */; };
+		DA2D516FAABED3E08FBDB9F6 /* EntryEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "EntryEditorView.swift"; path = "GreenCordHandbook/Views/EntryEditorView.swift"; sourceTree = "<group>"; };
+		1E1E894E739C4CD27E4819A6 /* EntryEditorView.swift in app */ = {isa = PBXBuildFile; fileRef = DA2D516FAABED3E08FBDB9F6 /* EntryEditorView.swift */; };
+		B82C813EB94F1AA718865B9C /* HandbookReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "HandbookReaderView.swift"; path = "GreenCordHandbook/Views/HandbookReaderView.swift"; sourceTree = "<group>"; };
+		0FBBBFE43958BEB95E8C7376 /* HandbookReaderView.swift in app */ = {isa = PBXBuildFile; fileRef = B82C813EB94F1AA718865B9C /* HandbookReaderView.swift */; };
+		2AA49882DCD2C904F4356A91 /* MyHoursView.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "MyHoursView.swift"; path = "GreenCordHandbook/Views/MyHoursView.swift"; sourceTree = "<group>"; };
+		262F4F3170078399543C2644 /* MyHoursView.swift in app */ = {isa = PBXBuildFile; fileRef = 2AA49882DCD2C904F4356A91 /* MyHoursView.swift */; };
+		E3286E7DBB678B4936140E9B /* PreviewSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "PreviewSupport.swift"; path = "GreenCordHandbook/Views/PreviewSupport.swift"; sourceTree = "<group>"; };
+		6147BDB64B6A77254D3B4223 /* PreviewSupport.swift in app */ = {isa = PBXBuildFile; fileRef = E3286E7DBB678B4936140E9B /* PreviewSupport.swift */; };
+		27F9DED7007EA6F5C8A4D36F /* ProgressView_GreenCord.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "ProgressView_GreenCord.swift"; path = "GreenCordHandbook/Views/ProgressView_GreenCord.swift"; sourceTree = "<group>"; };
+		F0157528F47843F7AA5FE7F8 /* ProgressView_GreenCord.swift in app */ = {isa = PBXBuildFile; fileRef = 27F9DED7007EA6F5C8A4D36F /* ProgressView_GreenCord.swift */; };
+		73B3F622960245DA1D17F632 /* ReviewQueueView.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "ReviewQueueView.swift"; path = "GreenCordHandbook/Views/ReviewQueueView.swift"; sourceTree = "<group>"; };
+		9C0B1C7D5F2D5AACE40F1ABC /* ReviewQueueView.swift in app */ = {isa = PBXBuildFile; fileRef = 73B3F622960245DA1D17F632 /* ReviewQueueView.swift */; };
+		55A22C0B0D5BC7C3792596EB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "RootView.swift"; path = "GreenCordHandbook/Views/RootView.swift"; sourceTree = "<group>"; };
+		8C4ECD435682C82FB9DF888B /* RootView.swift in app */ = {isa = PBXBuildFile; fileRef = 55A22C0B0D5BC7C3792596EB /* RootView.swift */; };
+		F8E4D15E1F9528A104A532E2 /* RosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "RosterView.swift"; path = "GreenCordHandbook/Views/RosterView.swift"; sourceTree = "<group>"; };
+		FE03DFE1F73B4E7FDF82DA8D /* RosterView.swift in app */ = {isa = PBXBuildFile; fileRef = F8E4D15E1F9528A104A532E2 /* RosterView.swift */; };
+		A5A67CD141C78DB4020C72AC /* StaffView.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "StaffView.swift"; path = "GreenCordHandbook/Views/StaffView.swift"; sourceTree = "<group>"; };
+		F11E390BCBCB174538B4B1E6 /* StaffView.swift in app */ = {isa = PBXBuildFile; fileRef = A5A67CD141C78DB4020C72AC /* StaffView.swift */; };
+		D437577CAF6DD43A7FFC02A7 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "WelcomeView.swift"; path = "GreenCordHandbook/Views/WelcomeView.swift"; sourceTree = "<group>"; };
+		47F3AAC6551C3E63D635659C /* WelcomeView.swift in app */ = {isa = PBXBuildFile; fileRef = D437577CAF6DD43A7FFC02A7 /* WelcomeView.swift */; };
+		EE76DC1403C6BE806326B793 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = "folder.assetcatalog"; name = "Assets.xcassets"; path = "GreenCordHandbook/Assets.xcassets"; sourceTree = "<group>"; };
+		B5254B490670F7B53453A0E5 /* Assets.xcassets in app */ = {isa = PBXBuildFile; fileRef = EE76DC1403C6BE806326B793 /* Assets.xcassets */; };
+		2DFC27C42B603417E54CA8BE /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = "text.plist.xml"; name = "PrivacyInfo.xcprivacy"; path = "GreenCordHandbook/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
+		1B81FDE326E5101466AFB2A4 /* PrivacyInfo.xcprivacy in app */ = {isa = PBXBuildFile; fileRef = 2DFC27C42B603417E54CA8BE /* PrivacyInfo.xcprivacy */; };
+		29684149920A05A129983F09 /* handbook.json */ = {isa = PBXFileReference; lastKnownFileType = "text.json"; name = "handbook.json"; path = "GreenCordHandbook/Resources/handbook.json"; sourceTree = "<group>"; };
+		8942673E83402223E022FA91 /* handbook.json in app */ = {isa = PBXBuildFile; fileRef = 29684149920A05A129983F09 /* handbook.json */; };
+		7D37CD642D6457E689162149 /* requirements.json */ = {isa = PBXFileReference; lastKnownFileType = "text.json"; name = "requirements.json"; path = "GreenCordHandbook/Resources/requirements.json"; sourceTree = "<group>"; };
+		63799AB27FB5B1B5460F2D08 /* requirements.json in app */ = {isa = PBXBuildFile; fileRef = 7D37CD642D6457E689162149 /* requirements.json */; };
+		48470184224F6DAFF2D50CF7 /* PISDGreenCordHandbook.pdf */ = {isa = PBXFileReference; lastKnownFileType = "image.pdf"; name = "PISDGreenCordHandbook.pdf"; path = "GreenCordHandbook/Resources/PISDGreenCordHandbook.pdf"; sourceTree = "<group>"; };
+		0A88A6603F1FCCE1B52959B4 /* PISDGreenCordHandbook.pdf in app */ = {isa = PBXBuildFile; fileRef = 48470184224F6DAFF2D50CF7 /* PISDGreenCordHandbook.pdf */; };
+		4986E7F5FF2B4F938751298D /* ContentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "ContentTests.swift"; path = "GreenCordHandbookTests/ContentTests.swift"; sourceTree = "<group>"; };
+		D41E255D7AA9C5AA58BE79A8 /* ContentTests.swift in tests */ = {isa = PBXBuildFile; fileRef = 4986E7F5FF2B4F938751298D /* ContentTests.swift */; };
+		1D967D23BC45B9B309B97AA6 /* ContentUpdateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "ContentUpdateTests.swift"; path = "GreenCordHandbookTests/ContentUpdateTests.swift"; sourceTree = "<group>"; };
+		C6AFA8D2F41CF84B0B0D8BD4 /* ContentUpdateTests.swift in tests */ = {isa = PBXBuildFile; fileRef = 1D967D23BC45B9B309B97AA6 /* ContentUpdateTests.swift */; };
+		52BEBB94A9F5E570805B2001 /* OfflineAndExportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "OfflineAndExportTests.swift"; path = "GreenCordHandbookTests/OfflineAndExportTests.swift"; sourceTree = "<group>"; };
+		A11DBF5C1FEC6725B6EC5F9D /* OfflineAndExportTests.swift in tests */ = {isa = PBXBuildFile; fileRef = 52BEBB94A9F5E570805B2001 /* OfflineAndExportTests.swift */; };
+		3B9BF2D7A3F01153072682D5 /* RequirementsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "RequirementsTests.swift"; path = "GreenCordHandbookTests/RequirementsTests.swift"; sourceTree = "<group>"; };
+		C04F48B116A5780AFC805EFE /* RequirementsTests.swift in tests */ = {isa = PBXBuildFile; fileRef = 3B9BF2D7A3F01153072682D5 /* RequirementsTests.swift */; };
+		575E2CAC9ED8FD5BD3C05115 /* handbook-outline.md */ = {isa = PBXFileReference; lastKnownFileType = "net.daringfireball.markdown"; name = "handbook-outline.md"; path = "content/handbook-outline.md"; sourceTree = "<group>"; };
+		D7385B735C6A1727DF8A41EC /* handbook-outline.md in tests */ = {isa = PBXBuildFile; fileRef = 575E2CAC9ED8FD5BD3C05115 /* handbook-outline.md */; };
+		A498C533440013DAA9E45B4C /* handbook.json */ = {isa = PBXFileReference; lastKnownFileType = "text.json"; name = "handbook.json"; path = "content/handbook.json"; sourceTree = "<group>"; };
+		9F1B2C2ECA37A038BD4C7795 /* handbook.json in tests */ = {isa = PBXBuildFile; fileRef = A498C533440013DAA9E45B4C /* handbook.json */; };
+		478220A1806F4C53B591E1A0 /* requirements.json */ = {isa = PBXFileReference; lastKnownFileType = "text.json"; name = "requirements.json"; path = "content/requirements.json"; sourceTree = "<group>"; };
+		EAF5518D8D582601AEB86B63 /* requirements.json in tests */ = {isa = PBXBuildFile; fileRef = 478220A1806F4C53B591E1A0 /* requirements.json */; };
+		80491AD75535F69D65233765 /* PISDGreenCordHandbook.pdf */ = {isa = PBXFileReference; lastKnownFileType = "image.pdf"; name = "PISDGreenCordHandbook.pdf"; path = "content/source/PISDGreenCordHandbook.pdf"; sourceTree = "<group>"; };
+		D5665084416DCA4CD65445A5 /* PISDGreenCordHandbook.pdf in tests */ = {isa = PBXBuildFile; fileRef = 80491AD75535F69D65233765 /* PISDGreenCordHandbook.pdf */; };
+		FA1914B76B99798FE0D2B5BE /* DemoRehearsalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "DemoRehearsalTests.swift"; path = "GreenCordHandbookUITests/DemoRehearsalTests.swift"; sourceTree = "<group>"; };
+		7A6915E7404172B22281A762 /* DemoRehearsalTests.swift in uitests */ = {isa = PBXBuildFile; fileRef = FA1914B76B99798FE0D2B5BE /* DemoRehearsalTests.swift */; };
+		EAC761A1725A8DB30DDE4847 /* ReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; name = "ReaderUITests.swift"; path = "GreenCordHandbookUITests/ReaderUITests.swift"; sourceTree = "<group>"; };
+		6ABA80F3E3BFA6F6136FA1E9 /* ReaderUITests.swift in uitests */ = {isa = PBXBuildFile; fileRef = EAC761A1725A8DB30DDE4847 /* ReaderUITests.swift */; };
+		53198DC6C37B58630585589C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85895E99B6873B92440CE79B,
+				1147AE81C09F064DB476FA9B,
+				E986F4A3D93E0A607B31A5C7,
+				33D52D3629C6CB2B72551A6B,
+				667E75ED619431B18EB5A04B,
+				671403A624E28EE92C1C5FEF,
+				0FFD42AE3405B35ADADD73AE,
+				1FD8AA1C513E75265ED0E479,
+				312C9EBB6A2194218AED720E,
+				D54CA2D446906B1569D9D150,
+				28DCBE60A36A389ED8C494FC,
+				2253F47A329460E2D48E7805,
+				5DBF3B7B3492C673BEF59FEC,
+				DFC3B6762F51BE6DE47A5E44,
+				640BEEF6483796344A899A1D,
+				E28D217BE5DBF567B329CCC1,
+				75DFB16BCCC4BE38F14DFD97,
+				4A5EB9777F4614EB4B32FE5F,
+				170BA416AE5EF6FE1E6BC7DD,
+				1E1E894E739C4CD27E4819A6,
+				0FBBBFE43958BEB95E8C7376,
+				262F4F3170078399543C2644,
+				6147BDB64B6A77254D3B4223,
+				F0157528F47843F7AA5FE7F8,
+				9C0B1C7D5F2D5AACE40F1ABC,
+				8C4ECD435682C82FB9DF888B,
+				FE03DFE1F73B4E7FDF82DA8D,
+				F11E390BCBCB174538B4B1E6,
+				47F3AAC6551C3E63D635659C,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81AD946F3CFB886263B716CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5254B490670F7B53453A0E5,
+				1B81FDE326E5101466AFB2A4,
+				8942673E83402223E022FA91,
+				63799AB27FB5B1B5460F2D08,
+				0A88A6603F1FCCE1B52959B4,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953746E9467872522866BED5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F315267672199E5C6DE6A6E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D41E255D7AA9C5AA58BE79A8,
+				C6AFA8D2F41CF84B0B0D8BD4,
+				A11DBF5C1FEC6725B6EC5F9D,
+				C04F48B116A5780AFC805EFE,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A5C8FC758D66CADF07BE4CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7385B735C6A1727DF8A41EC,
+				9F1B2C2ECA37A038BD4C7795,
+				EAF5518D8D582601AEB86B63,
+				D5665084416DCA4CD65445A5,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EA8BDA1A2C61D3C175C11B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F06BB84981C89A1F82FA326 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A6915E7404172B22281A762,
+				6ABA80F3E3BFA6F6136FA1E9,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E577D8B46605F7E024F00994 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B438B56FE97E3FBD6E02AB1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = "text.plist.xml"; name = "Info.plist"; path = "GreenCordHandbook/Info.plist"; sourceTree = "<group>"; };
+		201FD1CAC5D9C68DF6578F2F /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				668F2185013FC4AB729AF1E2,
+				7785A4DE82CF3A0E34621B6D,
+				F1EE78D576B678DF6E12B24E,
+				3FE70940D11AE14F2759AF91,
+				1BF7E3263131316798463F1A,
+			);
+			name = "Backend";
+			sourceTree = "<group>";
+		};
+		AC6E8EBB970F9D9AD6FA1521 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				2C7418718109E7EAF0822988,
+				EA18F980EBFC497B67FCEBCC,
+			);
+			name = "Content";
+			sourceTree = "<group>";
+		};
+		9A7D89B34A3682C210571BD0 /* Export */ = {
+			isa = PBXGroup;
+			children = (
+				AF1EF3B9D049783B86D0B13B,
+			);
+			name = "Export";
+			sourceTree = "<group>";
+		};
+		D0CBFCB52AC130FAE654FFA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACD651FC91F8A438D7CFA1DE,
+				CEFEF65BE4EF46356A18870B,
+				60AFE31D30CB773C73A8554F,
+				253912314B0074A6539C59F0,
+			);
+			name = "Model";
+			sourceTree = "<group>";
+		};
+		EF4658D316D1C0024A043B03 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				C1DA7EA6CA3678AC31E8CDE8,
+			);
+			name = "Notifications";
+			sourceTree = "<group>";
+		};
+		2295F4F5A8CE9A521B41D10C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				48470184224F6DAFF2D50CF7,
+				29684149920A05A129983F09,
+				7D37CD642D6457E689162149,
+			);
+			name = "Resources";
+			sourceTree = "<group>";
+		};
+		01FF64DE9C06355F118F61C7 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				CFBB6AB0912391B9E66BDF04,
+			);
+			name = "Search";
+			sourceTree = "<group>";
+		};
+		6C5140C67289CEB3341A411E /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				659FFEF2DA323999A18D725F,
+			);
+			name = "Theme";
+			sourceTree = "<group>";
+		};
+		244CBE79B437C15F95AE6CDA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				02B2DBC0016A7BBC1902F14D,
+				6DE4831D264497DF6D8EDE02,
+				DA2D516FAABED3E08FBDB9F6,
+				B82C813EB94F1AA718865B9C,
+				2AA49882DCD2C904F4356A91,
+				E3286E7DBB678B4936140E9B,
+				27F9DED7007EA6F5C8A4D36F,
+				73B3F622960245DA1D17F632,
+				55A22C0B0D5BC7C3792596EB,
+				F8E4D15E1F9528A104A532E2,
+				A5A67CD141C78DB4020C72AC,
+				D437577CAF6DD43A7FFC02A7,
+			);
+			name = "Views";
+			sourceTree = "<group>";
+		};
+		629C30522766FEF858A6930E /* GreenCordHandbook */ = {
+			isa = PBXGroup;
+			children = (
+				C0E06897B8323E2790690755,
+				EE76DC1403C6BE806326B793,
+				67700D3654B7438ED0A6F85A,
+				B438B56FE97E3FBD6E02AB1A,
+				2DFC27C42B603417E54CA8BE,
+				201FD1CAC5D9C68DF6578F2F,
+				AC6E8EBB970F9D9AD6FA1521,
+				9A7D89B34A3682C210571BD0,
+				D0CBFCB52AC130FAE654FFA1,
+				EF4658D316D1C0024A043B03,
+				2295F4F5A8CE9A521B41D10C,
+				01FF64DE9C06355F118F61C7,
+				6C5140C67289CEB3341A411E,
+				244CBE79B437C15F95AE6CDA,
+			);
+			name = "GreenCordHandbook";
+			sourceTree = "<group>";
+		};
+		9E7CF8D9B00C3E2333480864 /* GreenCordHandbookTests */ = {
+			isa = PBXGroup;
+			children = (
+				4986E7F5FF2B4F938751298D,
+				1D967D23BC45B9B309B97AA6,
+				52BEBB94A9F5E570805B2001,
+				3B9BF2D7A3F01153072682D5,
+			);
+			name = "GreenCordHandbookTests";
+			sourceTree = "<group>";
+		};
+		C13AAA9C30623490E5D3A471 /* GreenCordHandbookUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA1914B76B99798FE0D2B5BE,
+				EAC761A1725A8DB30DDE4847,
+			);
+			name = "GreenCordHandbookUITests";
+			sourceTree = "<group>";
+		};
+		94973E8BE3A9DF99C0667F1C /* content */ = {
+			isa = PBXGroup;
+			children = (
+				575E2CAC9ED8FD5BD3C05115,
+				A498C533440013DAA9E45B4C,
+				478220A1806F4C53B591E1A0,
+				80491AD75535F69D65233765,
+			);
+			name = "content";
+			sourceTree = "<group>";
+		};
+		D6871E7FE5D3B289C2643DD7 /* GreenCordHandbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GreenCordHandbook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		465B721E281B8A67F3F41201 /* GreenCordHandbookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GreenCordHandbookTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3654289E2C256B07345D74A0 /* GreenCordHandbookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GreenCordHandbookUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D96D76DF6A9F738587F2BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6871E7FE5D3B289C2643DD7,
+				465B721E281B8A67F3F41201,
+				3654289E2C256B07345D74A0,
+			);
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		09ABB7A49A38DF6DCF423DC8 /* GreenCordHandbook */ = {
+			isa = PBXGroup;
+			children = (
+				629C30522766FEF858A6930E,
+				9E7CF8D9B00C3E2333480864,
+				C13AAA9C30623490E5D3A471,
+				94973E8BE3A9DF99C0667F1C,
+				95D96D76DF6A9F738587F2BA,
+			);
+			name = "GreenCordHandbook";
+			sourceTree = "<group>";
+		};
+		3AD7C46413695B4EECFA3686 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A92F37F91D6D1F2E5729225F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37928145B18B5DBA39E2513D /* Build configuration list for PBXProject */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AD7C46413695B4EECFA3686 /* Debug */,
+				A92F37F91D6D1F2E5729225F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4B96553ED5C0BC849EFBC9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGNING_ALLOWED[sdk=iphonesimulator*]" = NO;
+				"CODE_SIGNING_REQUIRED[sdk=iphonesimulator*]" = NO;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				GREENCORD_BACKEND_URL = "https://127.0.0.1:8443";
+				INFOPLIST_FILE = "GreenCordHandbook/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.1.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = net.princetonisd.pshs.greencord;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		24F431BB5F44EA0B6516E634 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGNING_ALLOWED[sdk=iphonesimulator*]" = NO;
+				"CODE_SIGNING_REQUIRED[sdk=iphonesimulator*]" = NO;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				GREENCORD_BACKEND_URL = "https://127.0.0.1:8443";
+				INFOPLIST_FILE = "GreenCordHandbook/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.princetonisd.pshs.greencord;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CCB3B54F744F4CDC237DEB30 /* Build configuration list for app */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4B96553ED5C0BC849EFBC9D /* Debug */,
+				24F431BB5F44EA0B6516E634 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89F98820021AFE3D34F8A413 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGNING_ALLOWED[sdk=iphonesimulator*]" = NO;
+				"CODE_SIGNING_REQUIRED[sdk=iphonesimulator*]" = NO;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = net.princetonisd.pshs.greencord.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GreenCordHandbook.app/GreenCordHandbook";
+			};
+			name = Debug;
+		};
+		8EFD7D2935E822F31F2EA146 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGNING_ALLOWED[sdk=iphonesimulator*]" = NO;
+				"CODE_SIGNING_REQUIRED[sdk=iphonesimulator*]" = NO;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.princetonisd.pshs.greencord.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GreenCordHandbook.app/GreenCordHandbook";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A3F312B7C5FECBC7FA4BFA3 /* Build configuration list for tests */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89F98820021AFE3D34F8A413 /* Debug */,
+				8EFD7D2935E822F31F2EA146 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D081C63A5F4ECBD259B7848 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGNING_ALLOWED[sdk=iphonesimulator*]" = NO;
+				"CODE_SIGNING_REQUIRED[sdk=iphonesimulator*]" = NO;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = net.princetonisd.pshs.greencord.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "GreenCordHandbook";
+			};
+			name = Debug;
+		};
+		103588C588D612E91E0DF58F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGNING_ALLOWED[sdk=iphonesimulator*]" = NO;
+				"CODE_SIGNING_REQUIRED[sdk=iphonesimulator*]" = NO;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.princetonisd.pshs.greencord.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "GreenCordHandbook";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9FA32871E10877BB89F5223F /* Build configuration list for uitests */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D081C63A5F4ECBD259B7848 /* Debug */,
+				103588C588D612E91E0DF58F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADFBC6835E3E38972BDA6273 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D006D85A7F4FECF89D7A7CD3;
+			proxyType = 1;
+			remoteGlobalIDString = 7DD0A2F01353ED35078A4D5C;
+			remoteInfo = GreenCordHandbook;
+		};
+		CBB262ACD04271B87E65C086 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DD0A2F01353ED35078A4D5C /* GreenCordHandbook */;
+			targetProxy = ADFBC6835E3E38972BDA6273 /* PBXContainerItemProxy */;
+		};
+		11260991FAB4C11B2F897129 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D006D85A7F4FECF89D7A7CD3;
+			proxyType = 1;
+			remoteGlobalIDString = 7DD0A2F01353ED35078A4D5C;
+			remoteInfo = GreenCordHandbook;
+		};
+		91DFA7E14B1560BB4F09C214 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DD0A2F01353ED35078A4D5C /* GreenCordHandbook */;
+			targetProxy = 11260991FAB4C11B2F897129 /* PBXContainerItemProxy */;
+		};
+		7DD0A2F01353ED35078A4D5C /* GreenCordHandbook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCB3B54F744F4CDC237DEB30;
+			buildPhases = (
+				53198DC6C37B58630585589C,
+				953746E9467872522866BED5,
+				81AD946F3CFB886263B716CC,
+			);
+			buildRules = (
+			);
+			dependencies = (
+
+			);
+			name = "GreenCordHandbook";
+			productName = "GreenCordHandbook";
+			productReference = D6871E7FE5D3B289C2643DD7;
+			productType = "com.apple.product-type.application";
+		};
+		416165E5D44795A49D73FC46 /* GreenCordHandbookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A3F312B7C5FECBC7FA4BFA3;
+			buildPhases = (
+				F315267672199E5C6DE6A6E3,
+				0EA8BDA1A2C61D3C175C11B9,
+				1A5C8FC758D66CADF07BE4CC,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBB262ACD04271B87E65C086,
+			);
+			name = "GreenCordHandbookTests";
+			productName = "GreenCordHandbookTests";
+			productReference = 465B721E281B8A67F3F41201;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FBCBBF6FD66AEF2E0CB9A1F2 /* GreenCordHandbookUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FA32871E10877BB89F5223F;
+			buildPhases = (
+				8F06BB84981C89A1F82FA326,
+				E577D8B46605F7E024F00994,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91DFA7E14B1560BB4F09C214,
+			);
+			name = "GreenCordHandbookUITests";
+			productName = "GreenCordHandbookUITests";
+			productReference = 3654289E2C256B07345D74A0;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		D006D85A7F4FECF89D7A7CD3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					7DD0A2F01353ED35078A4D5C = {CreatedOnToolsVersion = 26.0;};
+					416165E5D44795A49D73FC46 = {CreatedOnToolsVersion = 26.0; TestTargetID = 7DD0A2F01353ED35078A4D5C;};
+					FBCBBF6FD66AEF2E0CB9A1F2 = {CreatedOnToolsVersion = 26.0; TestTargetID = 7DD0A2F01353ED35078A4D5C;};
+				};
+			};
+			buildConfigurationList = 37928145B18B5DBA39E2513D;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 09ABB7A49A38DF6DCF423DC8;
+			productRefGroup = 95D96D76DF6A9F738587F2BA;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7DD0A2F01353ED35078A4D5C,
+				416165E5D44795A49D73FC46,
+				FBCBBF6FD66AEF2E0CB9A1F2,
+			);
+		};
+	};
+}

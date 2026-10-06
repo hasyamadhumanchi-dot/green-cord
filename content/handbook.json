@@ -1,0 +1,1648 @@
+{
+  "contentVersion": "2026.08.21",
+  "pageCount": 20,
+  "schemaVersion": 1,
+  "sections": [
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 0,
+          "text": "Princeton Senior High School Building Leaders Through Service"
+        }
+      ],
+      "endPage": 0,
+      "id": "princeton-isd-green-cord-community-service-program-handbook",
+      "order": 0,
+      "plainText": "Princeton Senior High School Building Leaders Through Service",
+      "startPage": 0,
+      "title": "PRINCETON ISD GREEN CORD COMMUNITY SERVICE PROGRAM HANDBOOK"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 1,
+          "text": "PROGRAM OVERVIEW...............................................................................3 PROGRAM PURPOSE.................................................................................3 HOW TO JOIN THE PROGRAM.................................................................. 4 ELIGIBILITY REQUIREMENTS....................................................................5 SERVICE HOUR REQUIREMENTS.............................................................5 SENIOR DISTINGUISHED SERVICE LEVELS............................................7 FOUR-YEAR SERVICE DISTINCTION........................................................7 FOUNDING CLASSES AND TRANSFER STUDENT PATHWAYS..............8 WHAT COUNTS AS COMMUNITY SERVICE............................................11 ACTIVITIES THAT DO NOT QUALIFY.......................................................13 FAITH BASED ORGANIZATION GUIDELINES..........................................14 DOCUMENTATION REQUIREMENTS.......................................................15 VERIFICATION PROCESS........................................................................ 15 DEADLINES............................................................................................... 16 STUDENT RESPONSIBILITIES.................................................................16 PARENT RESPONSIBILITIES....................................................................16 FREQUENTLY ASKED QUESTIONS.........................................................17 COMMUNITY SERVICE VERIFICATION FORM....................................... 18 STUDENT & PARENT ACKNOWLEDGEMENT.........................................19 GREEN CORD MEMBERSHIP APPLICATION..........................................20"
+        }
+      ],
+      "endPage": 1,
+      "id": "table-of-contents",
+      "order": 1,
+      "plainText": "PROGRAM OVERVIEW...............................................................................3 PROGRAM PURPOSE.................................................................................3 HOW TO JOIN THE PROGRAM.................................................................. 4 ELIGIBILITY REQUIREMENTS....................................................................5 SERVICE HOUR REQUIREMENTS.............................................................5 SENIOR DISTINGUISHED SERVICE LEVELS............................................7 FOUR-YEAR SERVICE DISTINCTION........................................................7 FOUNDING CLASSES AND TRANSFER STUDENT PATHWAYS..............8 WHAT COUNTS AS COMMUNITY SERVICE............................................11 ACTIVITIES THAT DO NOT QUALIFY.......................................................13 FAITH BASED ORGANIZATION GUIDELINES..........................................14 DOCUMENTATION REQUIREMENTS.......................................................15 VERIFICATION PROCESS........................................................................ 15 DEADLINES............................................................................................... 16 STUDENT RESPONSIBILITIES.................................................................16 PARENT RESPONSIBILITIES....................................................................16 FREQUENTLY ASKED QUESTIONS.........................................................17 COMMUNITY SERVICE VERIFICATION FORM....................................... 18 STUDENT & PARENT ACKNOWLEDGEMENT.........................................19 GREEN CORD MEMBERSHIP APPLICATION..........................................20",
+      "startPage": 1,
+      "title": "TABLE OF CONTENTS"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 2,
+          "text": "The Princeton ISD Green Cord Community Service Program recognizes students who demonstrate a commitment to serving others through meaningful volunteer work within their school and community."
+        },
+        {
+          "kind": "paragraph",
+          "page": 2,
+          "text": "The program is designed to encourage students to develop a lifelong habit of service while building leadership skills, civic responsibility, and community involvement."
+        },
+        {
+          "kind": "paragraph",
+          "page": 2,
+          "text": "Students may begin earning hours on June 1 prior to their freshman year and continue accumulating hours through their senior year."
+        },
+        {
+          "kind": "paragraph",
+          "page": 2,
+          "text": "Students who complete the required service hours will receive recognition based upon their grade level participation and may ultimately earn the prestigious Green Cord to wear at graduation."
+        }
+      ],
+      "endPage": 2,
+      "id": "program-overview",
+      "order": 2,
+      "plainText": "The Princeton ISD Green Cord Community Service Program recognizes students who demonstrate a commitment to serving others through meaningful volunteer work within their school and community. The program is designed to encourage students to develop a lifelong habit of service while building leadership skills, civic responsibility, and community involvement. Students may begin earning hours on June 1 prior to their freshman year and continue accumulating hours through their senior year. Students who complete the required service hours will receive recognition based upon their grade level participation and may ultimately earn the prestigious Green Cord to wear at graduation.",
+      "startPage": 2,
+      "title": "PROGRAM OVERVIEW"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 2,
+          "text": "The purpose of the Princeton ISD Green Cord Community Service Program is to:"
+        },
+        {
+          "kind": "bullet",
+          "page": 2,
+          "text": "Encourage community engagement and civic responsibility."
+        },
+        {
+          "kind": "bullet",
+          "page": 2,
+          "text": "Promote leadership through service."
+        },
+        {
+          "kind": "bullet",
+          "page": 2,
+          "text": "Recognize students who make a positive impact on others."
+        },
+        {
+          "kind": "bullet",
+          "page": 2,
+          "text": "Foster partnerships between Princeton ISD and the surrounding community."
+        },
+        {
+          "kind": "bullet",
+          "page": 2,
+          "text": "Help students build experiences that strengthen college, military, trade school, and"
+        },
+        {
+          "kind": "paragraph",
+          "page": 2,
+          "text": "career applications."
+        },
+        {
+          "kind": "bullet",
+          "page": 2,
+          "text": "Inspire students to become lifelong servants and leaders."
+        }
+      ],
+      "endPage": 2,
+      "id": "program-purpose",
+      "order": 3,
+      "plainText": "The purpose of the Princeton ISD Green Cord Community Service Program is to: Encourage community engagement and civic responsibility. Promote leadership through service. Recognize students who make a positive impact on others. Foster partnerships between Princeton ISD and the surrounding community. Help students build experiences that strengthen college, military, trade school, and career applications. Inspire students to become lifelong servants and leaders.",
+      "startPage": 2,
+      "title": "PROGRAM PURPOSE"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 3,
+          "text": "Students interested in participating in the Princeton ISD Green Cord Community Service Program must complete the enrollment process each school year by October 1 to be eligible for annual recognition and awards."
+        },
+        {
+          "kind": "paragraph",
+          "page": 3,
+          "text": "To become a Green Cord member, students must:"
+        },
+        {
+          "kind": "bullet",
+          "page": 3,
+          "text": "Complete the Green Cord Membership Application"
+        },
+        {
+          "kind": "bullet",
+          "page": 3,
+          "text": "Submit the Parent & Student Acknowledgement Form"
+        },
+        {
+          "kind": "bullet",
+          "page": 3,
+          "text": "Pay the one-time $20 Green Cord Membership Fee"
+        },
+        {
+          "kind": "bullet",
+          "page": 3,
+          "text": "Join the Green Cord Google Classroom"
+        },
+        {
+          "kind": "paragraph",
+          "page": 3,
+          "text": "Once all enrollment requirements have been completed, students may begin submitting eligible community service hours for verification."
+        },
+        {
+          "kind": "paragraph",
+          "page": 3,
+          "text": "Students are encouraged to enroll as early as possible to maximize volunteer opportunities throughout the school year."
+        }
+      ],
+      "endPage": 3,
+      "id": "how-to-join-the-program",
+      "order": 4,
+      "plainText": "Students interested in participating in the Princeton ISD Green Cord Community Service Program must complete the enrollment process each school year by October 1 to be eligible for annual recognition and awards. To become a Green Cord member, students must: Complete the Green Cord Membership Application Submit the Parent & Student Acknowledgement Form Pay the one-time $20 Green Cord Membership Fee Join the Green Cord Google Classroom Once all enrollment requirements have been completed, students may begin submitting eligible community service hours for verification. Students are encouraged to enroll as early as possible to maximize volunteer opportunities throughout the school year.",
+      "startPage": 3,
+      "title": "HOW TO JOIN THE PROGRAM"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 3,
+          "text": "A one-time membership fee of $20.00 is required upon enrollment in the Princeton ISD Green Cord Community Service Program. Payable through RevTrak."
+        },
+        {
+          "kind": "paragraph",
+          "page": 3,
+          "text": "The membership fee helps cover program expenses including:"
+        },
+        {
+          "kind": "bullet",
+          "page": 3,
+          "text": "Graduation Green Cord & Stoles"
+        },
+        {
+          "kind": "paragraph",
+          "page": 3,
+          "text": "Annual service certificates Recognition materials and awards Printing and program administration Senior recognition activities Students pay the membership fee only once during their high school career."
+        },
+        {
+          "kind": "paragraph",
+          "page": 3,
+          "text": "Membership remains active through graduation provided the student remains enrolled in Princeton ISD."
+        },
+        {
+          "kind": "paragraph",
+          "page": 3,
+          "text": "Membership fees are non-refundable."
+        }
+      ],
+      "endPage": 3,
+      "id": "membership-fee",
+      "order": 5,
+      "plainText": "A one-time membership fee of $20.00 is required upon enrollment in the Princeton ISD Green Cord Community Service Program. Payable through RevTrak. The membership fee helps cover program expenses including: Graduation Green Cord & Stoles Annual service certificates Recognition materials and awards Printing and program administration Senior recognition activities Students pay the membership fee only once during their high school career. Membership remains active through graduation provided the student remains enrolled in Princeton ISD. Membership fees are non-refundable.",
+      "startPage": 3,
+      "title": "MEMBERSHIP FEE"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 4,
+          "text": "Students must complete all enrollment requirements no later than October 1 of the school year they first join to be eligible for Green Cord recognition during that academic year."
+        },
+        {
+          "kind": "paragraph",
+          "page": 4,
+          "text": "Enrollment requirements include:"
+        },
+        {
+          "kind": "bullet",
+          "page": 4,
+          "text": "Membership application submitted"
+        },
+        {
+          "kind": "paragraph",
+          "page": 4,
+          "text": "Parent acknowledgement form submitted Membership fee paid Google Classroom enrollment completed Students who enroll after October 1 may participate in program activities and begin accumulating service hours for the following school year; however, they will not be eligible for recognition during the current school year."
+        },
+        {
+          "kind": "paragraph",
+          "page": 4,
+          "text": "Exceptions may be granted by the Green Cord Coordinator or campus administration for students who enroll at Princeton High School after October 1."
+        }
+      ],
+      "endPage": 4,
+      "id": "enrollment-deadline",
+      "order": 6,
+      "plainText": "Students must complete all enrollment requirements no later than October 1 of the school year they first join to be eligible for Green Cord recognition during that academic year. Enrollment requirements include: Membership application submitted Parent acknowledgement form submitted Membership fee paid Google Classroom enrollment completed Students who enroll after October 1 may participate in program activities and begin accumulating service hours for the following school year; however, they will not be eligible for recognition during the current school year. Exceptions may be granted by the Green Cord Coordinator or campus administration for students who enroll at Princeton High School after October 1.",
+      "startPage": 4,
+      "title": "ENROLLMENT DEADLINE"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 4,
+          "text": "Students transferring into Lovelady High School or Princeton Senior High School after October 1 may petition for participation in the Green Cord Program. See page 9 to review Transfer Pathways and service requirements."
+        },
+        {
+          "kind": "paragraph",
+          "page": 4,
+          "text": "Service hours completed at a previous high school during the current academic year may be considered if appropriate documentation and verification are provided."
+        },
+        {
+          "kind": "paragraph",
+          "page": 4,
+          "text": "Final approval of transfer student participation rests with the Green Cord Coordinator and campus administration."
+        }
+      ],
+      "endPage": 4,
+      "id": "transfer-students",
+      "order": 7,
+      "plainText": "Students transferring into Lovelady High School or Princeton Senior High School after October 1 may petition for participation in the Green Cord Program. See page 9 to review Transfer Pathways and service requirements. Service hours completed at a previous high school during the current academic year may be considered if appropriate documentation and verification are provided. Final approval of transfer student participation rests with the Green Cord Coordinator and campus administration.",
+      "startPage": 4,
+      "title": "TRANSFER STUDENTS"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 4,
+          "text": "Participation is open to all Lovelady High School and Princeton Senior High School students in grades 9-12."
+        },
+        {
+          "kind": "paragraph",
+          "page": 4,
+          "text": "Students may begin accumulating service hours beginning June 1st prior to each school year."
+        },
+        {
+          "kind": "paragraph",
+          "page": 4,
+          "text": "Only documented and verified volunteer hours will be accepted."
+        },
+        {
+          "kind": "paragraph",
+          "page": 4,
+          "text": "Students are responsible for maintaining and submitting all required documentation."
+        }
+      ],
+      "endPage": 4,
+      "id": "eligibility-requirements",
+      "order": 8,
+      "plainText": "Participation is open to all Lovelady High School and Princeton Senior High School students in grades 9-12. Students may begin accumulating service hours beginning June 1st prior to each school year. Only documented and verified volunteer hours will be accepted. Students are responsible for maintaining and submitting all required documentation.",
+      "startPage": 4,
+      "title": "ELIGIBILITY REQUIREMENTS"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 5,
+          "text": "The Green Cord Program operates on an annual basis. Service hours do not carry over from one school year to the next."
+        },
+        {
+          "kind": "paragraph",
+          "page": 5,
+          "text": "Each school year begins with a zero-hour balance. Students must earn the required number of service hours during that school year to qualify for recognition."
+        },
+        {
+          "kind": "paragraph",
+          "page": 5,
+          "text": "Students may begin earning hours for the upcoming school year on June 1 preceding that academic year."
+        },
+        {
+          "kind": "subheading",
+          "page": 5,
+          "text": "Freshman Service Certificate"
+        },
+        {
+          "kind": "paragraph",
+          "page": 5,
+          "text": "Minimum 25 cumulative verified service hours Recognition:"
+        },
+        {
+          "kind": "bullet",
+          "page": 5,
+          "text": "Freshman Service Certificate"
+        },
+        {
+          "kind": "bullet",
+          "page": 5,
+          "text": "School recognition"
+        },
+        {
+          "kind": "subheading",
+          "page": 5,
+          "text": "Sophomore Service Certificate"
+        },
+        {
+          "kind": "paragraph",
+          "page": 5,
+          "text": "Minimum 50 cumulative verified service hours Recognition:"
+        },
+        {
+          "kind": "bullet",
+          "page": 5,
+          "text": "Sophomore Service Certificate"
+        },
+        {
+          "kind": "bullet",
+          "page": 5,
+          "text": "School recognition"
+        },
+        {
+          "kind": "subheading",
+          "page": 5,
+          "text": "Junior Service Certificate"
+        },
+        {
+          "kind": "paragraph",
+          "page": 5,
+          "text": "Minimum 75 cumulative verified service hours Recognition:"
+        },
+        {
+          "kind": "bullet",
+          "page": 5,
+          "text": "Junior Service Certificate"
+        },
+        {
+          "kind": "bullet",
+          "page": 5,
+          "text": "School recognition"
+        },
+        {
+          "kind": "subheading",
+          "page": 5,
+          "text": "Senior Green Cord Award"
+        },
+        {
+          "kind": "paragraph",
+          "page": 5,
+          "text": "Minimum 100 cumulative verified service hours Recognition:"
+        },
+        {
+          "kind": "bullet",
+          "page": 5,
+          "text": "Green Cord worn during graduation"
+        },
+        {
+          "kind": "bullet",
+          "page": 5,
+          "text": "Community Service Certificate"
+        },
+        {
+          "kind": "bullet",
+          "page": 5,
+          "text": "Recognition at Senior Awards Program"
+        },
+        {
+          "kind": "paragraph",
+          "page": 5,
+          "text": "If a student completes all four years they would complete a total of 250 hours."
+        }
+      ],
+      "endPage": 5,
+      "id": "service-hour-requirements",
+      "order": 9,
+      "plainText": "The Green Cord Program operates on an annual basis. Service hours do not carry over from one school year to the next. Each school year begins with a zero-hour balance. Students must earn the required number of service hours during that school year to qualify for recognition. Students may begin earning hours for the upcoming school year on June 1 preceding that academic year. Freshman Service Certificate Minimum 25 cumulative verified service hours Recognition: Freshman Service Certificate School recognition Sophomore Service Certificate Minimum 50 cumulative verified service hours Recognition: Sophomore Service Certificate School recognition Junior Service Certificate Minimum 75 cumulative verified service hours Recognition: Junior Service Certificate School recognition Senior Green Cord Award Minimum 100 cumulative verified service hours Recognition: Green Cord worn during graduation Community Service Certificate Recognition at Senior Awards Program If a student completes all four years they would complete a total of 250 hours.",
+      "startPage": 5,
+      "title": "SERVICE HOUR REQUIREMENTS"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 6,
+          "text": "Students exceeding the minimum requirement during their Senior Year may earn additional recognitions. Students will receive a cord for each level they achieve."
+        },
+        {
+          "kind": "subheading",
+          "page": 6,
+          "text": "Green Cord (Green Cord)"
+        },
+        {
+          "kind": "paragraph",
+          "page": 6,
+          "text": "100-149 Hours"
+        },
+        {
+          "kind": "subheading",
+          "page": 6,
+          "text": "Silver Service Distinction (Green and White Cord)"
+        },
+        {
+          "kind": "paragraph",
+          "page": 6,
+          "text": "150-199 Hours"
+        },
+        {
+          "kind": "subheading",
+          "page": 6,
+          "text": "Gold Service Distinction (Green and Yellow Cord)"
+        },
+        {
+          "kind": "paragraph",
+          "page": 6,
+          "text": "200+ Hours Students earning Silver or Gold Service Distinction will be recognized during the Senior Awards Program."
+        }
+      ],
+      "endPage": 6,
+      "id": "senior-distinguished-service-levels",
+      "order": 10,
+      "plainText": "Students exceeding the minimum requirement during their Senior Year may earn additional recognitions. Students will receive a cord for each level they achieve. Green Cord (Green Cord) 100-149 Hours Silver Service Distinction (Green and White Cord) 150-199 Hours Gold Service Distinction (Green and Yellow Cord) 200+ Hours Students earning Silver or Gold Service Distinction will be recognized during the Senior Awards Program.",
+      "startPage": 6,
+      "title": "SENIOR DISTINGUISHED SERVICE LEVELS"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 6,
+          "text": "Students who earn the annual service recognition during all four years of high school will receive special recognition as a:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 6,
+          "text": "Princeton ISD Distinguished Service Scholar Requirements:"
+        },
+        {
+          "kind": "bullet",
+          "page": 6,
+          "text": "Freshman Certificate (25 hours)"
+        },
+        {
+          "kind": "paragraph",
+          "page": 6,
+          "text": "Sophomore Certificate (50 hours) Junior Certificate (75 hours) Senior Green Cord (100 hours) Total of 250 hours accumulated throughout high school These students will be recognized at the Senior Awards Ceremony and noted in the graduation program as well as receiving a Distinguished Service Stole."
+        },
+        {
+          "kind": "paragraph",
+          "page": 6,
+          "text": "(This recognition will begin with the Class of 2030 for Graduating Classes prior to 2030 see Founding Classes provision on next page)"
+        }
+      ],
+      "endPage": 6,
+      "id": "four-year-service-distinction",
+      "order": 11,
+      "plainText": "Students who earn the annual service recognition during all four years of high school will receive special recognition as a: Princeton ISD Distinguished Service Scholar Requirements: Freshman Certificate (25 hours) Sophomore Certificate (50 hours) Junior Certificate (75 hours) Senior Green Cord (100 hours) Total of 250 hours accumulated throughout high school These students will be recognized at the Senior Awards Ceremony and noted in the graduation program as well as receiving a Distinguished Service Stole. (This recognition will begin with the Class of 2030 for Graduating Classes prior to 2030 see Founding Classes provision on next page)",
+      "startPage": 6,
+      "title": "FOUR-YEAR SERVICE DISTINCTION"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 7,
+          "text": "Princeton ISD recognizes that some students may transfer into the district after freshman year and that students graduating prior to the Class of 2030 did not have access to the Green Cord Program during all four years of high school."
+        },
+        {
+          "kind": "paragraph",
+          "page": 7,
+          "text": "To provide equitable access to the Princeton ISD Distinguished Service Scholar designation while preserving the prestige of the award, alternative pathways have been established for transfer students and founding classes."
+        }
+      ],
+      "endPage": 7,
+      "id": "founding-classes-and-transfer-student-pathways",
+      "order": 12,
+      "plainText": "Princeton ISD recognizes that some students may transfer into the district after freshman year and that students graduating prior to the Class of 2030 did not have access to the Green Cord Program during all four years of high school. To provide equitable access to the Princeton ISD Distinguished Service Scholar designation while preserving the prestige of the award, alternative pathways have been established for transfer students and founding classes.",
+      "startPage": 7,
+      "title": "FOUNDING CLASSES AND TRANSFER STUDENT PATHWAYS"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 7,
+          "text": "Students in the Classes of 2027, 2028, and 2029 may earn the Princeton ISD Distinguished Service Scholar designation by following the Transfer Student Distinguished Service Scholar Pathway corresponding to the first year they were eligible to participate in the Princeton ISD Green Cord Program."
+        },
+        {
+          "kind": "paragraph",
+          "page": 7,
+          "text": "Graduation Class Pathway Class of 2027 Senior Transfer Pathway Class of 2028 Junior Transfer Pathway Class of 2029 Sophomore Transfer Pathway Class of 2030 and Beyond Standard Four-Year Pathway This provision shall expire following the graduation of the Class of 2029."
+        }
+      ],
+      "endPage": 7,
+      "id": "founding-classes-provision",
+      "order": 13,
+      "plainText": "Students in the Classes of 2027, 2028, and 2029 may earn the Princeton ISD Distinguished Service Scholar designation by following the Transfer Student Distinguished Service Scholar Pathway corresponding to the first year they were eligible to participate in the Princeton ISD Green Cord Program. Graduation Class Pathway Class of 2027 Senior Transfer Pathway Class of 2028 Junior Transfer Pathway Class of 2029 Sophomore Transfer Pathway Class of 2030 and Beyond Standard Four-Year Pathway This provision shall expire following the graduation of the Class of 2029.",
+      "startPage": 7,
+      "title": "Founding Classes Provision"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 8,
+          "text": "Students who transfer into Princeton High School after their freshman year may qualify for the Princeton ISD Distinguished Service Scholar designation by meeting the service-hour requirements for their applicable pathway. Because transfer students have fewer years available to participate in the Green Cord Program, they must complete a greater number of service hours during the years they are eligible to participate in order to demonstrate a comparable level of sustained service."
+        },
+        {
+          "kind": "paragraph",
+          "page": 8,
+          "text": "The Distinguished Service Scholar pathway is separate from the senior-year Distinguished Service Levels. A transfer student's senior-year cord recognition is determined solely by the number of verified service hours completed during senior year."
+        },
+        {
+          "kind": "paragraph",
+          "page": 8,
+          "text": "Students transferring into Princeton High School after freshman year may qualify for the Distinguished Service Scholar designation by meeting the following requirements:"
+        },
+        {
+          "kind": "subheading",
+          "page": 8,
+          "text": "Students Entering During Sophomore Year:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 8,
+          "text": "Grade Level Hours Required Sophomore Year 75 Hours Junior Year 75 Hours Senior Year 100 Hours Minimum Total: 250 Hours"
+        },
+        {
+          "kind": "subheading",
+          "page": 8,
+          "text": "Students Entering During Junior Year:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 8,
+          "text": "Grade Level Hours Required Junior Year 100 Hours Senior Year 150 Hours Minimum Total: 250 Hours"
+        },
+        {
+          "kind": "subheading",
+          "page": 9,
+          "text": "Students Entering During Senior Year:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 9,
+          "text": "Grade Level Hours Required Senior Year 250 Hours Minimum Total: 250 Hours Any student who meets this requirement and maintains compliance with all Green Cord Program requirements will qualify for the Princeton ISD Distinguished Service Scholar designation."
+        }
+      ],
+      "endPage": 9,
+      "id": "transfer-student-distinguished-service-scholar-pathway",
+      "order": 14,
+      "plainText": "Students who transfer into Princeton High School after their freshman year may qualify for the Princeton ISD Distinguished Service Scholar designation by meeting the service-hour requirements for their applicable pathway. Because transfer students have fewer years available to participate in the Green Cord Program, they must complete a greater number of service hours during the years they are eligible to participate in order to demonstrate a comparable level of sustained service. The Distinguished Service Scholar pathway is separate from the senior-year Distinguished Service Levels. A transfer student's senior-year cord recognition is determined solely by the number of verified service hours completed during senior year. Students transferring into Princeton High School after freshman year may qualify for the Distinguished Service Scholar designation by meeting the following requirements: Students Entering During Sophomore Year: Grade Level Hours Required Sophomore Year 75 Hours Junior Year 75 Hours Senior Year 100 Hours Minimum Total: 250 Hours Students Entering During Junior Year: Grade Level Hours Required Junior Year 100 Hours Senior Year 150 Hours Minimum Total: 250 Hours Students Entering During Senior Year: Grade Level Hours Required Senior Year 250 Hours Minimum Total: 250 Hours Any student who meets this requirement and maintains compliance with all Green Cord Program requirements will qualify for the Princeton ISD Distinguished Service Scholar designation.",
+      "startPage": 8,
+      "title": "Transfer Student Distinguished Service Scholar Pathway"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 9,
+          "text": "Transfer students remain eligible for the same senior-year service recognitions as all other Princeton High School students. The number of hours required for each senior-year distinction does not change based on when a student enters the district."
+        },
+        {
+          "kind": "paragraph",
+          "page": 9,
+          "text": "Green Cord 100\u2013149 senior-year hours Silver Service Distinction 150\u2013199 senior-year hours Gold Service Distinction 200+ senior-year hours Students earning Silver or Gold Service Distinction will be recognized during the Senior Awards Program."
+        },
+        {
+          "kind": "paragraph",
+          "page": 9,
+          "text": "Important: Earning a Green, Silver, or Gold senior-year distinction does not automatically qualify a transfer student for the Distinguished Service Scholar designation. The Distinguished Service Scholar designation requires completion of the applicable transfer pathway and the required cumulative service hours."
+        },
+        {
+          "kind": "paragraph",
+          "page": 9,
+          "text": "Transfer students must enroll in the Green Cord Program during their first eligible year at Princeton High School and maintain compliance with all program requirements."
+        },
+        {
+          "kind": "paragraph",
+          "page": 9,
+          "text": "The Green Cord Coordinator and campus administration reserve the right to review unique enrollment circumstances and make final determinations regarding eligibility."
+        }
+      ],
+      "endPage": 9,
+      "id": "senior-year-distinguished-service-levels-for-transfer-students",
+      "order": 15,
+      "plainText": "Transfer students remain eligible for the same senior-year service recognitions as all other Princeton High School students. The number of hours required for each senior-year distinction does not change based on when a student enters the district. Green Cord 100\u2013149 senior-year hours Silver Service Distinction 150\u2013199 senior-year hours Gold Service Distinction 200+ senior-year hours Students earning Silver or Gold Service Distinction will be recognized during the Senior Awards Program. Important: Earning a Green, Silver, or Gold senior-year distinction does not automatically qualify a transfer student for the Distinguished Service Scholar designation. The Distinguished Service Scholar designation requires completion of the applicable transfer pathway and the required cumulative service hours. Transfer students must enroll in the Green Cord Program during their first eligible year at Princeton High School and maintain compliance with all program requirements. The Green Cord Coordinator and campus administration reserve the right to review unique enrollment circumstances and make final determinations regarding eligibility.",
+      "startPage": 9,
+      "title": "SENIOR-YEAR DISTINGUISHED SERVICE LEVELS FOR TRANSFER STUDENTS"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 10,
+          "text": "Community service is defined as voluntary service performed without compensation for the benefit of others."
+        },
+        {
+          "kind": "paragraph",
+          "page": 10,
+          "text": "Examples include:"
+        },
+        {
+          "kind": "bullet",
+          "page": 10,
+          "text": "Food banks"
+        },
+        {
+          "kind": "bullet",
+          "page": 10,
+          "text": "Animal shelters"
+        },
+        {
+          "kind": "bullet",
+          "page": 10,
+          "text": "Community clean-up projects"
+        },
+        {
+          "kind": "bullet",
+          "page": 10,
+          "text": "Senior citizen centers"
+        },
+        {
+          "kind": "bullet",
+          "page": 10,
+          "text": "Libraries"
+        },
+        {
+          "kind": "bullet",
+          "page": 10,
+          "text": "Habitat for Humanity"
+        },
+        {
+          "kind": "bullet",
+          "page": 10,
+          "text": "Community outreach events"
+        },
+        {
+          "kind": "bullet",
+          "page": 10,
+          "text": "Youth mentoring"
+        },
+        {
+          "kind": "bullet",
+          "page": 10,
+          "text": "Tutoring programs"
+        },
+        {
+          "kind": "bullet",
+          "page": 10,
+          "text": "Nonprofit organizations"
+        },
+        {
+          "kind": "bullet",
+          "page": 10,
+          "text": "Faith Based Agency Event volunteering"
+        },
+        {
+          "kind": "bullet",
+          "page": 10,
+          "text": "Community festivals"
+        },
+        {
+          "kind": "bullet",
+          "page": 10,
+          "text": "Service projects sponsored by nonprofit organizations"
+        },
+        {
+          "kind": "bullet",
+          "page": 10,
+          "text": "Hospital volunteer programs"
+        },
+        {
+          "kind": "bullet",
+          "page": 10,
+          "text": "Community recreation programs"
+        },
+        {
+          "kind": "bullet",
+          "page": 10,
+          "text": "Attending Counseling Advisory Team meetings"
+        }
+      ],
+      "endPage": 10,
+      "id": "what-counts-as-community-service",
+      "order": 16,
+      "plainText": "Community service is defined as voluntary service performed without compensation for the benefit of others. Examples include: Food banks Animal shelters Community clean-up projects Senior citizen centers Libraries Habitat for Humanity Community outreach events Youth mentoring Tutoring programs Nonprofit organizations Faith Based Agency Event volunteering Community festivals Service projects sponsored by nonprofit organizations Hospital volunteer programs Community recreation programs Attending Counseling Advisory Team meetings",
+      "startPage": 10,
+      "title": "WHAT COUNTS AS COMMUNITY SERVICE"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 11,
+          "text": "To encourage a variety of service experiences, the following limits apply."
+        },
+        {
+          "kind": "subheading",
+          "page": 11,
+          "text": "School-Based Service"
+        },
+        {
+          "kind": "paragraph",
+          "page": 11,
+          "text": "Maximum: 60 hours Examples:"
+        },
+        {
+          "kind": "bullet",
+          "page": 11,
+          "text": "Teacher assistance outside school hours"
+        },
+        {
+          "kind": "bullet",
+          "page": 11,
+          "text": "Campus beautification"
+        },
+        {
+          "kind": "bullet",
+          "page": 11,
+          "text": "School-sponsored service projects"
+        },
+        {
+          "kind": "bullet",
+          "page": 11,
+          "text": "Academic tutoring"
+        },
+        {
+          "kind": "subheading",
+          "page": 11,
+          "text": "Faith Based Organizations"
+        },
+        {
+          "kind": "paragraph",
+          "page": 11,
+          "text": "Maximum: 40 hours Examples:"
+        },
+        {
+          "kind": "bullet",
+          "page": 11,
+          "text": "Food pantry assistance"
+        },
+        {
+          "kind": "bullet",
+          "page": 11,
+          "text": "Community outreach events"
+        },
+        {
+          "kind": "bullet",
+          "page": 11,
+          "text": "Faith based agency event volunteering"
+        },
+        {
+          "kind": "bullet",
+          "page": 11,
+          "text": "Childcare during events"
+        },
+        {
+          "kind": "bullet",
+          "page": 11,
+          "text": "Clothing drives"
+        },
+        {
+          "kind": "bullet",
+          "page": 11,
+          "text": "Mission service activities"
+        },
+        {
+          "kind": "subheading",
+          "page": 11,
+          "text": "Single Organization Limit"
+        },
+        {
+          "kind": "paragraph",
+          "page": 11,
+          "text": "Maximum: 40 hours Students must complete service through at least three separate organizations before qualifying for the Green Cord Award during their Senior Year."
+        }
+      ],
+      "endPage": 11,
+      "id": "service-hour-limitations",
+      "order": 17,
+      "plainText": "To encourage a variety of service experiences, the following limits apply. School-Based Service Maximum: 60 hours Examples: Teacher assistance outside school hours Campus beautification School-sponsored service projects Academic tutoring Faith Based Organizations Maximum: 40 hours Examples: Food pantry assistance Community outreach events Faith based agency event volunteering Childcare during events Clothing drives Mission service activities Single Organization Limit Maximum: 40 hours Students must complete service through at least three separate organizations before qualifying for the Green Cord Award during their Senior Year.",
+      "startPage": 11,
+      "title": "SERVICE HOUR LIMITATIONS"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 12,
+          "text": "The following activities are not eligible for Green Cord credit:"
+        },
+        {
+          "kind": "bullet",
+          "page": 12,
+          "text": "Paid employment"
+        },
+        {
+          "kind": "bullet",
+          "page": 12,
+          "text": "Internships receiving compensation"
+        },
+        {
+          "kind": "bullet",
+          "page": 12,
+          "text": "Babysitting for individuals or family members"
+        },
+        {
+          "kind": "bullet",
+          "page": 12,
+          "text": "Household chores"
+        },
+        {
+          "kind": "bullet",
+          "page": 12,
+          "text": "Yard work for family members"
+        },
+        {
+          "kind": "bullet",
+          "page": 12,
+          "text": "Caring for siblings"
+        },
+        {
+          "kind": "bullet",
+          "page": 12,
+          "text": "Activities completed solely for a grade"
+        },
+        {
+          "kind": "bullet",
+          "page": 12,
+          "text": "Mandatory club service requirements"
+        },
+        {
+          "kind": "bullet",
+          "page": 12,
+          "text": "Athletic team obligations"
+        },
+        {
+          "kind": "bullet",
+          "page": 12,
+          "text": "Club meetings"
+        },
+        {
+          "kind": "bullet",
+          "page": 12,
+          "text": "Fundraising sales"
+        },
+        {
+          "kind": "bullet",
+          "page": 12,
+          "text": "Donation collection"
+        },
+        {
+          "kind": "bullet",
+          "page": 12,
+          "text": "Travel time during service trips"
+        },
+        {
+          "kind": "bullet",
+          "page": 12,
+          "text": "Sleeping hours during service trips"
+        },
+        {
+          "kind": "bullet",
+          "page": 12,
+          "text": "Recreational activities during service trips"
+        },
+        {
+          "kind": "bullet",
+          "page": 12,
+          "text": "Community service for truancy or probation requirements"
+        },
+        {
+          "kind": "bullet",
+          "page": 12,
+          "text": "Court ordered community service"
+        }
+      ],
+      "endPage": 12,
+      "id": "activities-that-do-not-qualify",
+      "order": 18,
+      "plainText": "The following activities are not eligible for Green Cord credit: Paid employment Internships receiving compensation Babysitting for individuals or family members Household chores Yard work for family members Caring for siblings Activities completed solely for a grade Mandatory club service requirements Athletic team obligations Club meetings Fundraising sales Donation collection Travel time during service trips Sleeping hours during service trips Recreational activities during service trips Community service for truancy or probation requirements Court ordered community service",
+      "startPage": 12,
+      "title": "ACTIVITIES THAT DO NOT QUALIFY"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 13,
+          "text": "Princeton ISD welcomes volunteer service completed through faith-based organizations."
+        },
+        {
+          "kind": "paragraph",
+          "page": 13,
+          "text": "The following activities may be counted:"
+        },
+        {
+          "kind": "bullet",
+          "page": 13,
+          "text": "Food pantry work"
+        },
+        {
+          "kind": "bullet",
+          "page": 13,
+          "text": "Community outreach"
+        },
+        {
+          "kind": "bullet",
+          "page": 13,
+          "text": "Service projects"
+        },
+        {
+          "kind": "bullet",
+          "page": 13,
+          "text": "Childcare for community events"
+        },
+        {
+          "kind": "bullet",
+          "page": 13,
+          "text": "Faith based event volunteering"
+        },
+        {
+          "kind": "bullet",
+          "page": 13,
+          "text": "Mission service work"
+        },
+        {
+          "kind": "bullet",
+          "page": 13,
+          "text": "Clothing distribution"
+        },
+        {
+          "kind": "bullet",
+          "page": 13,
+          "text": "Community assistance programs"
+        },
+        {
+          "kind": "paragraph",
+          "page": 13,
+          "text": "The following activities do not qualify:"
+        },
+        {
+          "kind": "bullet",
+          "page": 13,
+          "text": "Attending worship services"
+        },
+        {
+          "kind": "bullet",
+          "page": 13,
+          "text": "Bible study attendance"
+        },
+        {
+          "kind": "bullet",
+          "page": 13,
+          "text": "Youth group attendance"
+        },
+        {
+          "kind": "bullet",
+          "page": 13,
+          "text": "Choir participation"
+        },
+        {
+          "kind": "bullet",
+          "page": 13,
+          "text": "Faith based instruction received by the student"
+        },
+        {
+          "kind": "paragraph",
+          "page": 13,
+          "text": "Maximum allowable hours through faith based organizations: 40 hours."
+        }
+      ],
+      "endPage": 13,
+      "id": "faith-based-organization-guidelines",
+      "order": 19,
+      "plainText": "Princeton ISD welcomes volunteer service completed through faith-based organizations. The following activities may be counted: Food pantry work Community outreach Service projects Childcare for community events Faith based event volunteering Mission service work Clothing distribution Community assistance programs The following activities do not qualify: Attending worship services Bible study attendance Youth group attendance Choir participation Faith based instruction received by the student Maximum allowable hours through faith based organizations: 40 hours.",
+      "startPage": 13,
+      "title": "FAITH BASED ORGANIZATION GUIDELINES"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 14,
+          "text": "All service hours must be documented using the Princeton ISD Community Service Verification Form. All community service hours must then be submitted through the Green Cord Google Classroom Google Form along with the required signed verification form. Hours will be reviewed and, once approved, added to the student's official Green Cord service log."
+        },
+        {
+          "kind": "paragraph",
+          "page": 14,
+          "text": "Required information includes:"
+        },
+        {
+          "kind": "bullet",
+          "page": 14,
+          "text": "Student name"
+        },
+        {
+          "kind": "bullet",
+          "page": 14,
+          "text": "Student ID number"
+        },
+        {
+          "kind": "bullet",
+          "page": 14,
+          "text": "Organization name"
+        },
+        {
+          "kind": "bullet",
+          "page": 14,
+          "text": "Description of service"
+        },
+        {
+          "kind": "bullet",
+          "page": 14,
+          "text": "Date(s) served"
+        },
+        {
+          "kind": "bullet",
+          "page": 14,
+          "text": "Hours completed"
+        },
+        {
+          "kind": "bullet",
+          "page": 14,
+          "text": "Supervisor name"
+        },
+        {
+          "kind": "bullet",
+          "page": 14,
+          "text": "Supervisor email"
+        },
+        {
+          "kind": "bullet",
+          "page": 14,
+          "text": "Supervisor phone number"
+        },
+        {
+          "kind": "bullet",
+          "page": 14,
+          "text": "Supervisor signature"
+        },
+        {
+          "kind": "paragraph",
+          "page": 14,
+          "text": "Incomplete forms may be rejected."
+        }
+      ],
+      "endPage": 14,
+      "id": "documentation-requirements",
+      "order": 20,
+      "plainText": "All service hours must be documented using the Princeton ISD Community Service Verification Form. All community service hours must then be submitted through the Green Cord Google Classroom Google Form along with the required signed verification form. Hours will be reviewed and, once approved, added to the student's official Green Cord service log. Required information includes: Student name Student ID number Organization name Description of service Date(s) served Hours completed Supervisor name Supervisor email Supervisor phone number Supervisor signature Incomplete forms may be rejected.",
+      "startPage": 14,
+      "title": "DOCUMENTATION REQUIREMENTS"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 14,
+          "text": "Princeton ISD reserves the right to:"
+        },
+        {
+          "kind": "bullet",
+          "page": 14,
+          "text": "Contact organizations"
+        },
+        {
+          "kind": "bullet",
+          "page": 14,
+          "text": "Verify submitted hours"
+        },
+        {
+          "kind": "bullet",
+          "page": 14,
+          "text": "Request additional documentation"
+        },
+        {
+          "kind": "bullet",
+          "page": 14,
+          "text": "Conduct random audits"
+        },
+        {
+          "kind": "paragraph",
+          "page": 14,
+          "text": "Submission of false information may result in:"
+        },
+        {
+          "kind": "bullet",
+          "page": 14,
+          "text": "Removal of hours"
+        },
+        {
+          "kind": "bullet",
+          "page": 14,
+          "text": "Disqualification from the program"
+        },
+        {
+          "kind": "bullet",
+          "page": 14,
+          "text": "Additional disciplinary action as determined by school administration"
+        }
+      ],
+      "endPage": 14,
+      "id": "verification-process",
+      "order": 21,
+      "plainText": "Princeton ISD reserves the right to: Contact organizations Verify submitted hours Request additional documentation Conduct random audits Submission of false information may result in: Removal of hours Disqualification from the program Additional disciplinary action as determined by school administration",
+      "startPage": 14,
+      "title": "VERIFICATION PROCESS"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 15,
+          "text": "Freshman, Sophomore, and Junior Recognition April 15 annually Senior Green Cord Recognition All community service hours must be completed and submitted through the Green Cord Google Form no later than April 1 of the student's senior year."
+        },
+        {
+          "kind": "paragraph",
+          "page": 15,
+          "text": "Students are responsible for ensuring all required documentation is uploaded at the time of submission."
+        },
+        {
+          "kind": "paragraph",
+          "page": 15,
+          "text": "Submissions received after April 1 will not be considered for Green Cord recognition unless approved by campus administration due to extenuating circumstances."
+        }
+      ],
+      "endPage": 15,
+      "id": "deadlines",
+      "order": 22,
+      "plainText": "Freshman, Sophomore, and Junior Recognition April 15 annually Senior Green Cord Recognition All community service hours must be completed and submitted through the Green Cord Google Form no later than April 1 of the student's senior year. Students are responsible for ensuring all required documentation is uploaded at the time of submission. Submissions received after April 1 will not be considered for Green Cord recognition unless approved by campus administration due to extenuating circumstances.",
+      "startPage": 15,
+      "title": "DEADLINES"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 15,
+          "text": "Students are responsible for:"
+        },
+        {
+          "kind": "bullet",
+          "page": 15,
+          "text": "Finding volunteer opportunities"
+        },
+        {
+          "kind": "bullet",
+          "page": 15,
+          "text": "Completing service honestly"
+        },
+        {
+          "kind": "bullet",
+          "page": 15,
+          "text": "Maintaining records"
+        },
+        {
+          "kind": "bullet",
+          "page": 15,
+          "text": "Obtaining supervisor signatures"
+        },
+        {
+          "kind": "bullet",
+          "page": 15,
+          "text": "Meeting all deadlines"
+        },
+        {
+          "kind": "bullet",
+          "page": 15,
+          "text": "Submitting accurate documentation"
+        }
+      ],
+      "endPage": 15,
+      "id": "student-responsibilities",
+      "order": 23,
+      "plainText": "Students are responsible for: Finding volunteer opportunities Completing service honestly Maintaining records Obtaining supervisor signatures Meeting all deadlines Submitting accurate documentation",
+      "startPage": 15,
+      "title": "STUDENT RESPONSIBILITIES"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 15,
+          "text": "Parents are encouraged to:"
+        },
+        {
+          "kind": "bullet",
+          "page": 15,
+          "text": "Support student participation"
+        },
+        {
+          "kind": "bullet",
+          "page": 15,
+          "text": "Help students identify volunteer opportunities"
+        },
+        {
+          "kind": "bullet",
+          "page": 15,
+          "text": "Review submitted documentation"
+        },
+        {
+          "kind": "bullet",
+          "page": 15,
+          "text": "Encourage timely completion of service requirements"
+        },
+        {
+          "kind": "paragraph",
+          "page": 15,
+          "text": "Parents may not verify their own student's service hours."
+        }
+      ],
+      "endPage": 15,
+      "id": "parent-responsibilities",
+      "order": 24,
+      "plainText": "Parents are encouraged to: Support student participation Help students identify volunteer opportunities Review submitted documentation Encourage timely completion of service requirements Parents may not verify their own student's service hours.",
+      "startPage": 15,
+      "title": "PARENT RESPONSIBILITIES"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "subheading",
+          "page": 16,
+          "text": "Q: Can paid work count?"
+        },
+        {
+          "kind": "paragraph",
+          "page": 16,
+          "text": "A: No."
+        },
+        {
+          "kind": "subheading",
+          "page": 16,
+          "text": "Q: Can I earn hours during the summer?"
+        },
+        {
+          "kind": "paragraph",
+          "page": 16,
+          "text": "A: Yes. Hours may begin June 1 before freshman year and reset on June 1st for each school year."
+        },
+        {
+          "kind": "subheading",
+          "page": 16,
+          "text": "Q: Can I count NHS hours?"
+        },
+        {
+          "kind": "paragraph",
+          "page": 16,
+          "text": "A: Only if the hours are not required for membership."
+        },
+        {
+          "kind": "subheading",
+          "page": 16,
+          "text": "Q: Can I count mission trips?"
+        },
+        {
+          "kind": "paragraph",
+          "page": 16,
+          "text": "A: Actual service hours only. Travel, worship, and recreation time do not count."
+        },
+        {
+          "kind": "subheading",
+          "page": 16,
+          "text": "Q: Can family members sign my form?"
+        },
+        {
+          "kind": "paragraph",
+          "page": 16,
+          "text": "A: No."
+        },
+        {
+          "kind": "subheading",
+          "page": 16,
+          "text": "Q: What if I am unsure whether an activity qualifies?"
+        },
+        {
+          "kind": "paragraph",
+          "page": 16,
+          "text": "A: Contact your counselor or Green Cord Coordinator before participating."
+        },
+        {
+          "kind": "subheading",
+          "page": 16,
+          "text": "Q: I joined and filled out all the membership forms during my sophomore year, do I have to fill it out again during my junior year?"
+        },
+        {
+          "kind": "paragraph",
+          "page": 16,
+          "text": "A: No, once you join you remain a member and active as long as you are enrolled in PISD."
+        }
+      ],
+      "endPage": 16,
+      "id": "frequently-asked-questions",
+      "order": 25,
+      "plainText": "Q: Can paid work count? A: No. Q: Can I earn hours during the summer? A: Yes. Hours may begin June 1 before freshman year and reset on June 1st for each school year. Q: Can I count NHS hours? A: Only if the hours are not required for membership. Q: Can I count mission trips? A: Actual service hours only. Travel, worship, and recreation time do not count. Q: Can family members sign my form? A: No. Q: What if I am unsure whether an activity qualifies? A: Contact your counselor or Green Cord Coordinator before participating. Q: I joined and filled out all the membership forms during my sophomore year, do I have to fill it out again during my junior year? A: No, once you join you remain a member and active as long as you are enrolled in PISD.",
+      "startPage": 16,
+      "title": "FREQUENTLY ASKED QUESTIONS"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 17,
+          "text": "Student Name:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 17,
+          "text": "Student ID:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 17,
+          "text": "______________________________________ _______________ Grade Classification:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 17,
+          "text": "Graduation Year:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 17,
+          "text": "____________________ ______________________ Organization Name:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 17,
+          "text": "Organization Address:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 17,
+          "text": "Supervisor Name:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 17,
+          "text": "Supervisor Email:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 17,
+          "text": "Supervisor Phone:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 17,
+          "text": "Description of Service:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 17,
+          "text": "___________________________________________________________ _________________________________________________________ ____________________________________________________________ _____________________________________________________________ ____________________________________________________________ Date Hours Worked Date Hours Worked Total Hours:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 17,
+          "text": "___________ I certify that the above information is accurate."
+        },
+        {
+          "kind": "paragraph",
+          "page": 17,
+          "text": "Supervisor Signature:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 17,
+          "text": "Date:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 17,
+          "text": "_____________________________________ ________________ All community service hours must be submitted through the Green Cord Google Classroom Google Form along with the required signed verification form. Hours will be reviewed and, once approved, added to the student's official Green Cord service log."
+        }
+      ],
+      "endPage": 17,
+      "id": "community-service-verification-form",
+      "order": 26,
+      "plainText": "Student Name: Student ID: ______________________________________ _______________ Grade Classification: Graduation Year: ____________________ ______________________ Organization Name: Organization Address: Supervisor Name: Supervisor Email: Supervisor Phone: Description of Service: ___________________________________________________________ _________________________________________________________ ____________________________________________________________ _____________________________________________________________ ____________________________________________________________ Date Hours Worked Date Hours Worked Total Hours: ___________ I certify that the above information is accurate. Supervisor Signature: Date: _____________________________________ ________________ All community service hours must be submitted through the Green Cord Google Classroom Google Form along with the required signed verification form. Hours will be reviewed and, once approved, added to the student's official Green Cord service log.",
+      "startPage": 17,
+      "title": "COMMUNITY SERVICE VERIFICATION FORM"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 18,
+          "text": "We have read and understand the Princeton ISD Green Cord Community Service Program Handbook and agree to follow all program requirements."
+        },
+        {
+          "kind": "paragraph",
+          "page": 18,
+          "text": "Student Name:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 18,
+          "text": "_______________________________ Student Signature:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 18,
+          "text": "____________________________ Date:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 18,
+          "text": "_______________________________________ Parent/Guardian Name:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 18,
+          "text": "________________________ Parent/Guardian Signature:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 18,
+          "text": "_____________________ Date:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 18,
+          "text": "_______________________________________"
+        }
+      ],
+      "endPage": 18,
+      "id": "student-parent-acknowledgement",
+      "order": 27,
+      "plainText": "We have read and understand the Princeton ISD Green Cord Community Service Program Handbook and agree to follow all program requirements. Student Name: _______________________________ Student Signature: ____________________________ Date: _______________________________________ Parent/Guardian Name: ________________________ Parent/Guardian Signature: _____________________ Date: _______________________________________",
+      "startPage": 18,
+      "title": "STUDENT & PARENT ACKNOWLEDGEMENT"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "page": 18,
+          "text": "All Green Cord members are required to join the official Green Cord Google Classroom."
+        },
+        {
+          "kind": "paragraph",
+          "page": 18,
+          "text": "The Google Classroom will serve as the primary communication platform for:"
+        },
+        {
+          "kind": "bullet",
+          "page": 18,
+          "text": "Volunteer opportunities"
+        },
+        {
+          "kind": "paragraph",
+          "page": 18,
+          "text": "Program announcements Deadline reminders Required forms Community service resources Frequently asked questions Google Classroom Code:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 18,
+          "text": "_____________________ Students are responsible for monitoring announcements posted in the Green Cord Google Classroom."
+        }
+      ],
+      "endPage": 18,
+      "id": "google-classroom-participation",
+      "order": 28,
+      "plainText": "All Green Cord members are required to join the official Green Cord Google Classroom. The Google Classroom will serve as the primary communication platform for: Volunteer opportunities Program announcements Deadline reminders Required forms Community service resources Frequently asked questions Google Classroom Code: _____________________ Students are responsible for monitoring announcements posted in the Green Cord Google Classroom.",
+      "startPage": 18,
+      "title": "GOOGLE CLASSROOM PARTICIPATION"
+    },
+    {
+      "blocks": [
+        {
+          "kind": "subheading",
+          "page": 19,
+          "text": "Student Information"
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "Student Name:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "Student ID #:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "Grade Level:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "___________________________________ __________ Graduation Year:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "___________________ ___________________ Student Email:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "_______________________________________ Parent/Guardian Name:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "________________________________ Parent Email:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "________________________________________ Parent Phone:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "_______________________________________"
+        },
+        {
+          "kind": "subheading",
+          "page": 19,
+          "text": "Membership Agreement"
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "I understand the requirements of the Princeton ISD Green Cord Community Service Program and agree to:"
+        },
+        {
+          "kind": "bullet",
+          "page": 19,
+          "text": "Follow all program guidelines."
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "Submit accurate service documentation."
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "Complete service honestly and ethically."
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "Meet all program deadlines."
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "Represent Princeton ISD positively while volunteering."
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "Student Signature:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "Date:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "____________________________________ ____________ Parent Signature:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "Date:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "_____________________________________ ____________"
+        },
+        {
+          "kind": "subheading",
+          "page": 19,
+          "text": "Office Use Only"
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "Membership Fee Received: \u25a1 Yes \u25a1 No Amount Received: $20.00 Date Received:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "______________________ Receipt Number:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "____________________ Google Classroom Joined: \u25a1 Yes \u25a1 No Approved By:"
+        },
+        {
+          "kind": "paragraph",
+          "page": 19,
+          "text": "_______________________"
+        }
+      ],
+      "endPage": 19,
+      "id": "green-cord-membership-application",
+      "order": 29,
+      "plainText": "Student Information Student Name: Student ID #: Grade Level: ___________________________________ __________ Graduation Year: ___________________ ___________________ Student Email: _______________________________________ Parent/Guardian Name: ________________________________ Parent Email: ________________________________________ Parent Phone: _______________________________________ Membership Agreement I understand the requirements of the Princeton ISD Green Cord Community Service Program and agree to: Follow all program guidelines. Submit accurate service documentation. Complete service honestly and ethically. Meet all program deadlines. Represent Princeton ISD positively while volunteering. Student Signature: Date: ____________________________________ ____________ Parent Signature: Date: _____________________________________ ____________ Office Use Only Membership Fee Received: \u25a1 Yes \u25a1 No Amount Received: $20.00 Date Received: ______________________ Receipt Number: ____________________ Google Classroom Joined: \u25a1 Yes \u25a1 No Approved By: _______________________",
+      "startPage": 19,
+      "title": "GREEN CORD MEMBERSHIP APPLICATION"
+    }
+  ],
+  "sourcePdf": "PISDGreenCordHandbook.pdf"
+}

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme LastUpgradeVersion = "2600" version = "1.7">
+   <BuildAction parallelizeBuildables = "YES" buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7DD0A2F01353ED35078A4D5C"
+               BuildableName = "GreenCordHandbook.app"
+               BlueprintName = "GreenCordHandbook"
+               ReferencedContainer = "container:GreenCordHandbook.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <!-- shouldUseLaunchSchemeArgsEnv is NO so the tests do not inherit the Run
+        action's backend URL. Tests must behave the same whether or not a
+        server happens to be running on this machine. -->
+   <TestAction buildConfiguration = "Debug" selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB" selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB" shouldUseLaunchSchemeArgsEnv = "NO">
+      <Testables>
+         <TestableReference skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "416165E5D44795A49D73FC46"
+               BuildableName = "GreenCordHandbookTests.xctest"
+               BlueprintName = "GreenCordHandbookTests"
+               ReferencedContainer = "container:GreenCordHandbook.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FBCBBF6FD66AEF2E0CB9A1F2"
+               BuildableName = "GreenCordHandbookUITests.xctest"
+               BlueprintName = "GreenCordHandbookUITests"
+               ReferencedContainer = "container:GreenCordHandbook.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction buildConfiguration = "Debug" selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB" selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB" launchStyle = "0" useCustomWorkingDirectory = "NO" ignoresPersistentStateOnLaunch = "NO" debugDocumentVersioning = "YES" debugServiceExtension = "internal" allowLocationSimulation = "YES">
+      <!-- Points the app at the local prototype backend, so Run just works
+           once the seed script is running with its server kept alive. Untick
+           this in the scheme editor to run the app as a reader, with no
+           server at all. A double hyphen is illegal inside an XML comment,
+           so no command flags are spelled out here. -->
+      <EnvironmentVariables>
+         <EnvironmentVariable key = "GREENCORD_BACKEND_URL" value = "https://127.0.0.1:8443" isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
+      <BuildableProductRunnable runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "7DD0A2F01353ED35078A4D5C"
+            BuildableName = "GreenCordHandbook.app"
+            BlueprintName = "GreenCordHandbook"
+            ReferencedContainer = "container:GreenCordHandbook.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+   <ProfileAction buildConfiguration = "Release" shouldUseLaunchSchemeArgsEnv = "YES" savedToolIdentifier = "" useCustomWorkingDirectory = "NO" debugDocumentVersioning = "YES">
+      <BuildableProductRunnable runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "7DD0A2F01353ED35078A4D5C"
+            BuildableName = "GreenCordHandbook.app"
+            BlueprintName = "GreenCordHandbook"
+            ReferencedContainer = "container:GreenCordHandbook.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction buildConfiguration = "Debug"></AnalyzeAction>
+   <ArchiveAction buildConfiguration = "Release" revealArchiveInOrganizer = "YES"></ArchiveAction>
+</Scheme>

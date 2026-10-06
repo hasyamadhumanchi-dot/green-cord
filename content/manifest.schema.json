@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pshs.princetonisd.net/greencord-app-content/manifest.schema.json",
+  "title": "Green Cord content update manifest",
+  "description": "The document the school site hosts so the app can discover newer handbook content. Data only - it can never deliver code.",
+  "type": "object",
+  "required": ["schemaVersion", "contentVersion", "publishedAt", "files"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "description": "Shape of this manifest. The app refuses a manifest whose schemaVersion it does not understand.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1
+    },
+    "contentVersion": {
+      "description": "Sortable content version, YYYY.MM.DD. The app applies an update only when this is strictly greater than what it already has.",
+      "type": "string",
+      "pattern": "^[0-9]{4}\\.[0-9]{2}\\.[0-9]{2}$"
+    },
+    "publishedAt": {
+      "description": "ISO-8601 timestamp, for humans and for the update log.",
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
+    },
+    "notes": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "files": {
+      "description": "Every file in the payload. The app downloads each one, checks its SHA-256, and discards the whole update if any file fails.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["role", "name", "url", "sha256", "bytes"],
+        "additionalProperties": false,
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": ["handbook", "requirements", "pdf"]
+          },
+          "name": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9._-]+$"
+          },
+          "url": {
+            "description": "Absolute HTTPS URL. Plain HTTP is rejected by the app.",
+            "type": "string",
+            "pattern": "^https://"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      }
+    }
+  }
+}

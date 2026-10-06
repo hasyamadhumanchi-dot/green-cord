@@ -1,0 +1,32 @@
+# Build output
+.build/
+build/
+DerivedData/
+*.xcresult
+
+# Xcode per-user state
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# TLS material for the local prototype server. `tools/gen-certs.sh` regenerates
+# these; a private key must never be committed, even a self-signed one.
+*.key
+*.crt
+*.pem
+
+# Databases. These hold the records the app exists to protect - synthetic today,
+# real the moment anyone pilots this.
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Local secrets and environment overrides
+.env
+.env.*
+secrets.json
+
+# macOS
+.DS_Store

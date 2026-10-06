@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "2026.08.21",
+  "publishedAt": "2026-09-20T22:35:39Z",
+  "notes": "Princeton ISD Green Cord handbook content. Data only - no executable code.",
+  "files": [
+    {
+      "role": "handbook",
+      "name": "handbook.json",
+      "url": "https://pshs.princetonisd.net/greencord-app-content/handbook.json",
+      "sha256": "26b219df75ff8e66307aa0d43170a671d69185f1be0d1cf61b6308178f6f91a7",
+      "bytes": 70245
+    },
+    {
+      "role": "requirements",
+      "name": "requirements.json",
+      "url": "https://pshs.princetonisd.net/greencord-app-content/requirements.json",
+      "sha256": "a69da65f82ec2200330c087e4ad475e17df1a7a75afc6328cc94af767df6ed0a",
+      "bytes": 10700
+    },
+    {
+      "role": "pdf",
+      "name": "PISDGreenCordHandbook.pdf",
+      "url": "https://pshs.princetonisd.net/greencord-app-content/PISDGreenCordHandbook.pdf",
+      "sha256": "79efed01232a83475675c503325fba808e5c3eb1cd728dab6131d0b3ec0b3cf4",
+      "bytes": 497010
+    }
+  ]
+}

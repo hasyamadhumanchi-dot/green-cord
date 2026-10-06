@@ -1,0 +1,345 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "2026.08.21",
+  "source": {
+    "document": "Princeton ISD Green Cord Community Service Program Handbook",
+    "updatedAsOf": "8/21/2026",
+    "note": "Every value below is quoted or derived directly from the handbook page cited in its `page` field. Anything the handbook does not state is recorded as \"unspecified\"."
+  },
+  "program": {
+    "annualReset": {
+      "value": true,
+      "page": 6,
+      "quote": "The Green Cord Program operates on an annual basis. Service hours do not carry over from one school year to the next."
+    },
+    "earliestAccrualDate": {
+      "value": "June 1 preceding the academic year",
+      "page": 6,
+      "quote": "Students may begin earning hours for the upcoming school year on June 1 preceding that academic year."
+    },
+    "enrollmentDeadline": {
+      "value": "October 1",
+      "page": 5,
+      "quote": "Students must complete all enrollment requirements no later than October 1 of the school year they first join to be eligible for Green Cord recognition during that academic year."
+    },
+    "membershipFeeUSD": {
+      "value": 20.0,
+      "page": 4,
+      "quote": "A one-time membership fee of $20.00 is required upon enrollment in the Princeton ISD Green Cord Community Service Program. Payable through RevTrak."
+    },
+    "fourYearTotalHours": {
+      "value": 250,
+      "page": 6,
+      "quote": "If a student completes all four years they would complete a total of 250 hours."
+    }
+  },
+  "grades": [
+    {
+      "grade": 9,
+      "label": "Freshman",
+      "thresholdHours": {
+        "value": 25,
+        "page": 6,
+        "quote": "Freshman Service Certificate Minimum 25 cumulative verified service hours"
+      },
+      "recognition": {
+        "value": ["Freshman Service Certificate", "School recognition"],
+        "page": 6
+      },
+      "submissionDeadline": {
+        "value": "April 15",
+        "page": 16,
+        "quote": "Freshman, Sophomore, and Junior Recognition April 15 annually"
+      }
+    },
+    {
+      "grade": 10,
+      "label": "Sophomore",
+      "thresholdHours": {
+        "value": 50,
+        "page": 6,
+        "quote": "Sophomore Service Certificate Minimum 50 cumulative verified service hours"
+      },
+      "recognition": {
+        "value": ["Sophomore Service Certificate", "School recognition"],
+        "page": 6
+      },
+      "submissionDeadline": {
+        "value": "April 15",
+        "page": 16,
+        "quote": "Freshman, Sophomore, and Junior Recognition April 15 annually"
+      }
+    },
+    {
+      "grade": 11,
+      "label": "Junior",
+      "thresholdHours": {
+        "value": 75,
+        "page": 6,
+        "quote": "Junior Service Certificate Minimum 75 cumulative verified service hours"
+      },
+      "recognition": {
+        "value": ["Junior Service Certificate", "School recognition"],
+        "page": 6
+      },
+      "submissionDeadline": {
+        "value": "April 15",
+        "page": 16,
+        "quote": "Freshman, Sophomore, and Junior Recognition April 15 annually"
+      }
+    },
+    {
+      "grade": 12,
+      "label": "Senior",
+      "thresholdHours": {
+        "value": 100,
+        "page": 6,
+        "quote": "Senior Green Cord Award Minimum 100 cumulative verified service hours"
+      },
+      "recognition": {
+        "value": [
+          "Green Cord worn during graduation",
+          "Community Service Certificate",
+          "Recognition at Senior Awards Program"
+        ],
+        "page": 6
+      },
+      "submissionDeadline": {
+        "value": "April 1",
+        "page": 16,
+        "quote": "All community service hours must be completed and submitted through the Green Cord Google Form no later than April 1 of the student's senior year."
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "school-based",
+      "name": "School-Based Service",
+      "maxHours": {
+        "value": 60,
+        "page": 12,
+        "quote": "School-Based Service Maximum: 60 hours"
+      },
+      "examples": {
+        "value": [
+          "Teacher assistance outside school hours",
+          "Campus beautification",
+          "School-sponsored service projects",
+          "Academic tutoring"
+        ],
+        "page": 12
+      }
+    },
+    {
+      "id": "faith-based",
+      "name": "Faith Based Organizations",
+      "maxHours": {
+        "value": 40,
+        "page": 12,
+        "quote": "Faith Based Organizations Maximum: 40 hours"
+      },
+      "examples": {
+        "value": [
+          "Food pantry assistance",
+          "Community outreach events",
+          "Faith based agency event volunteering",
+          "Childcare during events",
+          "Clothing drives",
+          "Mission service activities"
+        ],
+        "page": 12
+      },
+      "excluded": {
+        "value": [
+          "Attending worship services",
+          "Bible study attendance",
+          "Youth group attendance",
+          "Choir participation",
+          "Faith based instruction received by the student"
+        ],
+        "page": 14,
+        "quote": "The following activities do not qualify"
+      }
+    },
+    {
+      "id": "community",
+      "name": "Community Organizations",
+      "maxHours": {
+        "value": "unspecified",
+        "page": 12,
+        "note": "The handbook states per-category maximums only for School-Based Service and Faith Based Organizations, plus a Single Organization Limit. It states no overall cap for other community service."
+      },
+      "examples": {
+        "value": [
+          "Food banks",
+          "Animal shelters",
+          "Community clean-up projects",
+          "Senior citizen centers",
+          "Libraries",
+          "Habitat for Humanity",
+          "Community outreach events",
+          "Youth mentoring",
+          "Tutoring programs",
+          "Nonprofit organizations",
+          "Faith Based Agency Event volunteering",
+          "Community festivals",
+          "Service projects sponsored by nonprofit organizations",
+          "Hospital volunteer programs",
+          "Community recreation programs",
+          "Attending Counseling Advisory Team meetings"
+        ],
+        "page": 11
+      }
+    }
+  ],
+  "limits": {
+    "singleOrganizationMaxHours": {
+      "value": 40,
+      "page": 12,
+      "quote": "Single Organization Limit Maximum: 40 hours"
+    },
+    "minimumDistinctOrganizationsSeniorYear": {
+      "value": 3,
+      "page": 12,
+      "quote": "Students must complete service through at least three separate organizations before qualifying for the Green Cord Award during their Senior Year."
+    }
+  },
+  "seniorDistinctionLevels": [
+    {
+      "id": "green",
+      "name": "Green Cord",
+      "minHours": 100,
+      "maxHours": 149,
+      "page": 7,
+      "quote": "Green Cord (Green Cord) 100-149 Hours"
+    },
+    {
+      "id": "silver",
+      "name": "Silver Service Distinction",
+      "minHours": 150,
+      "maxHours": 199,
+      "page": 7,
+      "quote": "Silver Service Distinction (Green and White Cord) 150-199 Hours"
+    },
+    {
+      "id": "gold",
+      "name": "Gold Service Distinction",
+      "minHours": 200,
+      "maxHours": null,
+      "page": 7,
+      "quote": "Gold Service Distinction (Green and Yellow Cord) 200+ Hours"
+    }
+  ],
+  "verificationRules": {
+    "requiredFields": {
+      "value": [
+        "Student name",
+        "Student ID number",
+        "Organization name",
+        "Description of service",
+        "Date(s) served",
+        "Hours completed",
+        "Supervisor name",
+        "Supervisor email",
+        "Supervisor phone number",
+        "Supervisor signature"
+      ],
+      "page": 15,
+      "quote": "All service hours must be documented using the Princeton ISD Community Service Verification Form."
+    },
+    "districtRights": {
+      "value": [
+        "Contact organizations",
+        "Verify submitted hours",
+        "Request additional documentation",
+        "Conduct random audits"
+      ],
+      "page": 15
+    },
+    "falseInformationConsequences": {
+      "value": [
+        "Removal of hours",
+        "Disqualification from the program",
+        "Additional disciplinary action as determined by school administration"
+      ],
+      "page": 15
+    },
+    "familyMayNotVerify": {
+      "value": true,
+      "page": 16,
+      "quote": "Parents may not verify their own student's service hours."
+    }
+  },
+  "nonQualifyingActivities": {
+    "value": [
+      "Paid employment",
+      "Internships receiving compensation",
+      "Babysitting for individuals or family members",
+      "Household chores",
+      "Yard work for family members",
+      "Caring for siblings",
+      "Activities completed solely for a grade",
+      "Mandatory club service requirements",
+      "Athletic team obligations",
+      "Club meetings",
+      "Fundraising sales",
+      "Donation collection",
+      "Travel time during service trips",
+      "Sleeping hours during service trips",
+      "Recreational activities during service trips",
+      "Community service for truancy or probation requirements",
+      "Court ordered community service"
+    ],
+    "page": 13
+  },
+  "checklist": [
+    {
+      "id": "membership-application",
+      "title": "Complete the Green Cord Membership Application",
+      "appliesToGrades": [9, 10, 11, 12],
+      "page": 4
+    },
+    {
+      "id": "parent-acknowledgement",
+      "title": "Submit the Parent & Student Acknowledgement Form",
+      "appliesToGrades": [9, 10, 11, 12],
+      "page": 4
+    },
+    {
+      "id": "membership-fee",
+      "title": "Pay the one-time $20 Green Cord Membership Fee",
+      "appliesToGrades": [9, 10, 11, 12],
+      "page": 4
+    },
+    {
+      "id": "google-classroom",
+      "title": "Join the Green Cord Google Classroom",
+      "appliesToGrades": [9, 10, 11, 12],
+      "page": 4
+    },
+    {
+      "id": "enroll-by-october-1",
+      "title": "Complete all enrollment requirements by October 1",
+      "appliesToGrades": [9, 10, 11, 12],
+      "page": 5
+    },
+    {
+      "id": "three-organizations",
+      "title": "Serve at least three separate organizations before the Green Cord Award",
+      "appliesToGrades": [12],
+      "page": 12
+    }
+  ],
+  "unspecified": [
+    {
+      "field": "categories[community].maxHours",
+      "reason": "The handbook sets maximums for School-Based Service (60), Faith Based Organizations (40) and any Single Organization (40). It sets no cap for community service generally.",
+      "page": 12
+    },
+    {
+      "field": "grades[*].minimumDistinctOrganizations",
+      "reason": "The three-organization requirement is stated only for the Senior Year Green Cord Award. The handbook states no distinct-organization minimum for grades 9, 10 or 11.",
+      "page": 12
+    }
+  ]
+}
