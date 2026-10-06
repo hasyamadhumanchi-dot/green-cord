@@ -1,53 +1,124 @@
-# Green Cord — Princeton Senior High School
+# Green Cord
 
-A prototype iOS app (iPhone and iPad) for the Princeton ISD Green Cord community
-service program. It presents the program handbook in two switchable reading
-modes, lets students in grades 9–12 log service hours, routes every entry to the
-program counselor for approval, and gives that counselor a roster of the whole
-cohort.
+**An iPhone and iPad app for the Princeton High School Green Cord program.**
+Students log the community service hours they need to graduate with honors; the
+program counselor verifies them; approved hours become a permanent record.
 
-**This is a prototype, built to show the counselor and ask for formal approval.**
-It is not published, not listed on the App Store, and not distributed beyond a
-simulator walkthrough. See [RELEASE.md](RELEASE.md) for what stands between here
-and a release, and [PROPOSAL.md](PROPOSAL.md) for the one-page summary written
-for the counselor.
+Built from the program's own handbook — every requirement in the app cites the
+page it came from.
+
+| | | |
+| :-: | :-: | :-: |
+| <img src="verification/redesign/iphone-welcome.png" width="230"> | <img src="verification/redesign/live-student.png" width="230"> | <img src="verification/redesign/rehearsal-counselor-invite-codes.png" width="230"> |
+| Sign in | A student's progress | Adding students |
+
+<img src="verification/redesign/live-counselor-ipad.png" width="700">
+
+*The counselor's dashboard on iPad.*
 
 ---
 
+## The problem
+
+Princeton HS runs the Green Cord program on paper forms and a Google Form.
+A student completes service, gets a supervisor's signature, hands the sheet in,
+and then has no idea where they stand until someone adds it up. The counselor
+has no running total for anybody, and nothing stops a student mis-stating what
+they did.
+
+The requirements themselves live in a PDF handbook most students never open:
+different hour thresholds per grade, category limits, deadlines, a separate
+distinction award for seniors.
+
 ## What it does
 
-**Signing in** — the app opens on Log In / Create Account and nothing is
-reachable before that, the handbook included. An account exists only by
-redeeming an invite code the counselor issued to that named student, so signing
-up is a confirmation rather than a registration.
+**For a student**
 
-**Reading the handbook** — a list of sections that opens the original PDF page
-via PDFKit. The pages are the handbook; nothing is retyped. The text is still
-extracted behind the scenes, but only to drive search and to give VoiceOver
-something to read. Search returns the section *and* the page.
+- Their standing against *their own grade's* requirement, with approved and
+  pending hours shown as separate figures that are never added together
+- Log an entry — date, hours, category, organization, what they did, and the
+  supervisor who can confirm it
+- The handbook itself, as the counselor's real pages, searchable
+- Works with no signal; entries made offline sync when a connection returns
 
-**Logging hours** — a student records a date, hours, category, organization,
-description and the supervisor who can verify it, optionally with a photo of the
-signed form. Entries can be edited while they are a draft, or after a counselor
-declines them or asks for changes. Once approved they are permanent.
+**For staff**
 
-**Progress** — approved hours against that student's own grade threshold (25 /
-50 / 75 / 100, from handbook page 6), broken down by category against the
-handbook's caps, with the grade's deadline. Hours awaiting review are shown as a
-separate, visibly different figure and are never added to the approved total.
+- A queue of submissions to approve, reject, or send back with a note
+- The whole cohort's progress, filterable by grade and surname, exportable as CSV
+- Add students by name — each one gets their own invite code
+- Add other staff to help review, and hand the program over on leaving
 
-**For the counselor** — a queue of submitted entries to approve, decline or send
-back with a note; a sortable roster of every student filterable by grade and
-last-name range; CSV export; invite-code generation and revocation; and the
-ability to enter hours on a student's behalf from a paper form.
+## Three decisions worth explaining
 
-**Offline** — the handbook, the requirements and the student's own entries are
-all readable with no network. New entries queue on the device and sync once,
-without duplication, when the connection returns.
+**Invite codes belong to a named student.** The counselor adds *Jordan Martinez,
+grade 11* and the code is Jordan's. Signing up is a confirmation — "this code is
+for Jordan Martinez, grade 11, correct?" — not a registration. So a student can't
+enrol under someone else's name or pick their own grade, and the roster is the
+counselor's list rather than whatever people typed about themselves. Students who
+have a code but haven't signed up still appear, marked *not joined*.
 
-**Updatable** — the app ships a copy of the handbook and checks a manifest on the
-school website for a newer one. An update is applied only when it is genuinely
-newer and every file matches its published SHA-256.
+**Approved hours are immutable to students.** Not greyed out in the app —
+enforced by the database. A student's `UPDATE` cannot see an approved row, so an
+edit has nothing to act on. Corrections happen through a counselor, and the
+original stays retrievable in an append-only audit log.
+
+**There is always exactly one program owner.** Three roles: students, managers
+who review hours, and admins who additionally create and remove staff. The
+server refuses any change that would leave zero admins, so handing the program
+over has a correct order — promote your replacement, then step down — and the
+program cannot be stranded when someone leaves the district. Approvals stay
+attributed to whoever made them, because an approval records who verified the
+work.
+
+## How it is built
+
+**App** — Swift and SwiftUI, iOS 17+, universal iPhone/iPad. PDFKit for the
+handbook, SwiftData for the offline cache and sync queue, no third-party
+dependencies at all.
+
+**Backend** — a Python reference server over HTTPS that mirrors a Postgres schema
+([`backend/migrations/0001_init.sql`](backend/migrations/0001_init.sql)). The
+Postgres file is the authoritative expression of the access rules: row-level
+security policies, transition guards and `SECURITY DEFINER` functions, so the
+rules hold even against a caller bypassing the app entirely.
+
+**Content** — the handbook PDF is parsed into structured data that cites its own
+page numbers. Updates are published to the school website and picked up by
+installed copies; changing a deadline does not need an App Store release.
+
+## Verified
+
+Everything below was run, not asserted:
+
+| | |
+| --- | --- |
+| Backend | **55 tests** over a real HTTPS socket |
+| iPhone 18 Pro | **44 unit + 19 UI tests** |
+| iPad Pro 13-inch (M5) | **44 unit + 19 UI tests** |
+| Accessibility | Dynamic Type, VoiceOver labels, a text alternative for every PDF page |
+| Contrast | All 12 text/background pairs meet WCAG AA |
+
+The security rules have tests of their own: a student cannot read another
+student's entries, reach the roster, edit an approved entry, approve anything,
+or promote themselves — each one asserted against a live server, not reasoned
+about. [`GATES.md`](GATES.md) records every check with its evidence.
+
+## Status
+
+A working prototype, demonstrated to the program coordinator, who asked for the
+staff-role model that is now built. **Not yet deployed and not on the App
+Store.**
+
+What that would take, honestly:
+
+- A hosted backend — the Postgres schema is written and mirrored, but has not
+  been applied to a live database
+- Written district authorization to use the name, the panther mark and student
+  records
+- Photo evidence currently records *that* a form was attached, not the image
+
+[`RELEASE.md`](RELEASE.md) tracks the rest. [`PROPOSAL.md`](PROPOSAL.md) is the
+one-page summary written for the counselor rather than for developers.
 
 ---
 
