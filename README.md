@@ -119,7 +119,8 @@ What that would take, honestly:
   records
 - Photo evidence currently records *that* a form was attached, not the image
 
-[`RELEASE.md`](RELEASE.md) tracks the rest. [`PROPOSAL.md`](PROPOSAL.md) is the
+[`RELEASE.md`](RELEASE.md) tracks the rest, and
+[`HANDOVER.md`](HANDOVER.md) is written for whoever picks this up next. [`PROPOSAL.md`](PROPOSAL.md) is the
 one-page summary written for the counselor rather than for developers.
 
 ---
