@@ -1376,13 +1376,21 @@ class Handler(BaseHTTPRequestHandler):
         self._dispatch("DELETE")
 
 
-def build_server(db_path, port, certfile, keyfile, bind="127.0.0.1"):
+def build_server(db_path, port, certfile, keyfile, bind="127.0.0.1", tls=True):
+    """The HTTP server.
+
+    `tls=False` exists for hosting. On a platform like Render or Railway the
+    edge terminates TLS and forwards plain HTTP over the internal network, so a
+    server holding its own certificate cannot be reached. Locally TLS stays on,
+    because the prototype should never speak plain HTTP across a real network.
+    """
     Handler.service = Service(db_path)
     httpd = ThreadingHTTPServer((bind, port), Handler)
-    context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
-    context.load_cert_chain(certfile, keyfile)
-    context.minimum_version = ssl.TLSVersion.TLSv1_2
-    httpd.socket = context.wrap_socket(httpd.socket, server_side=True)
+    if tls:
+        context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+        context.load_cert_chain(certfile, keyfile)
+        context.minimum_version = ssl.TLSVersion.TLSv1_2
+        httpd.socket = context.wrap_socket(httpd.socket, server_side=True)
     return httpd
 
 
@@ -1393,6 +1401,10 @@ def main():
     parser.add_argument("--cert", default=os.path.join(ROOT, "build", "certs", "server.crt"))
     parser.add_argument("--key", default=os.path.join(ROOT, "build", "certs", "server.key"))
     parser.add_argument(
+        "--no-tls", action="store_true",
+        help="serve plain HTTP, for hosting behind a proxy that terminates TLS",
+    )
+    parser.add_argument(
         "--bind",
         default="127.0.0.1",
         help="Address to listen on. The default accepts connections from this "
@@ -1402,13 +1414,23 @@ def main():
     )
     args = parser.parse_args()
 
-    os.makedirs(os.path.dirname(args.db), exist_ok=True)
-    if not (os.path.exists(args.cert) and os.path.exists(args.key)):
+    if os.path.dirname(args.db):
+        os.makedirs(os.path.dirname(args.db), exist_ok=True)
+    if not args.no_tls and not (os.path.exists(args.cert) and os.path.exists(args.key)):
         raise SystemExit(
             f"missing TLS certificate at {args.cert}. Run tools/gen-certs.sh first."
         )
-    httpd = build_server(args.db, args.port, args.cert, args.key, bind=args.bind)
-    print(f"greencord backend listening on https://{args.bind}:{args.port}  db={args.db}")
+    httpd = build_server(
+        args.db, args.port, args.cert, args.key, bind=args.bind, tls=not args.no_tls
+    )
+    scheme = "http" if args.no_tls else "https"
+    where = db.database_url()
+    print(
+        f"greencord backend listening on {scheme}://{args.bind}:{args.port}  "
+        + (f"postgres={where.split('@')[-1].split('/')[0]}" if where else f"db={args.db}")
+    )
+    if args.no_tls:
+        print("  plain HTTP: only correct behind a proxy that terminates TLS")
     if args.bind != "127.0.0.1":
         print("  reachable from other devices on this network")
     sys.stdout.flush()

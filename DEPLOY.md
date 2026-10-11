@@ -1,12 +1,12 @@
 # Deploying this for real
 
-The prototype runs on a laptop. This is what it would take to run it somewhere
-students can actually use it, written for whoever picks this up — including you,
-months from now, without the context you have today.
+The prototype runs on a laptop. This is what it takes to run it somewhere
+students can actually use it.
 
-**Read this before buying anything or creating accounts.** The honest summary is
-that deployment is a day or two of work, not an afternoon, and the cheap-sounding
-option is not the one that works.
+**The code side is done.** The server runs on Postgres, all 55 tests pass
+against a hosted database, and the access rules were verified there too. What is
+left is hosting configuration and the questions about ownership at the end of
+this file, which are harder than the code ever was.
 
 ---
 
@@ -15,177 +15,130 @@ option is not the one that works.
 | Piece | State |
 | --- | --- |
 | iOS app | Done. Talks to a custom API over HTTPS. |
-| API server | `backend/server.py` — complete, 55 tests, **stores data in SQLite** |
-| Postgres schema | `0001_init.sql` + `0002_standalone_auth.sql` — **applied to a real database, 15 access-rule checks passing** |
-| Hosting | None. The server runs on your Mac. |
+| API server | `backend/server.py` — runs on **SQLite or Postgres**, 55 tests passing on both |
+| Postgres schema | `0001` + `0002` + `0003` — **applied to a real database**, 15 access-rule checks passing |
+| Hosting | **None.** This is the remaining work. |
 
-The app calls endpoints like `POST /auth/login`, `GET /entries`, `GET /roster`,
-`POST /staff/invites`. Those are this project's own API, defined in
-`backend/server.py`. Nothing else serves them.
+Set `GREENCORD_DATABASE_URL` and the server uses Postgres. Leave it unset and
+nothing about the prototype changes.
 
----
+```bash
+# the prototype, unchanged
+tools/demo-start.sh
 
-## What has now been proven
-
-The migration was applied to a live Supabase Postgres 17 database and checked.
-
-| Check | Result |
-| --- | --- |
-| Migration applies cleanly | yes, all 405 lines |
-| Tables created | 7 |
-| Tables with row-level security | **7 of 7** |
-| Policies | 15 |
-| Functions / triggers | 8 / 3 |
-| Roles in the enum | `student, manager, admin` |
-
-Then the rules were attacked rather than admired. With two students seeded, one
-hour entry each:
-
-| Connecting as | `hour_entries` visible |
-| --- | --- |
-| `anon` — the key that ships inside the app | **0** |
-| `authenticated`, no identity | **0** |
-| signed in as student A | **1** — their own, not B's |
-
-The same held for `accounts`, `invite_codes` and `audit_log`. **A student cannot
-read another student's hours**, and that is now true of the production schema and
-not only of the SQLite server.
-
-This was the largest unknown in the project. It is closed.
-
----
-
-## The gap this uncovered
-
-The Postgres schema and the Python server **do not share an authentication
-model**, and this is the real obstacle to Option A below.
-
-- `accounts.id` in Postgres is `REFERENCES auth.users(id)`. Identity belongs to
-  Supabase: no row can exist in `accounts` without a Supabase auth user, and
-  every policy is written against `auth.uid()`.
-- `backend/db.py` implements its own: `accounts` carries `username`,
-  `password_hash` and `password_salt`, and `POST /auth/login` checks them.
-
-The Postgres `accounts` table has no `username` column at all. Pointing the
-existing server at this schema fails immediately on sign-in.
-
-**This has now been resolved, and option 1 below is built and tested.**
-`backend/migrations/0002_standalone_auth.sql` applies on top of 0001 and moves
-identity to the server: it adds `username`, `password_hash` and `password_salt`
-to `accounts`, drops the `auth.users` foreign key, and replaces `auth.uid()`
-with `app_uid()`, which reads an account id the server sets per request:
-
-```sql
-SET LOCAL greencord.account_id = '<the signed-in account id>';
+# the same server, on Postgres
+GREENCORD_DATABASE_URL=postgresql://... python3 backend/server.py --port 8443
 ```
 
-`backend/tests/test_postgres_rls.py` then checks the rules against the real
-database. All 15 checks pass:
+---
 
-| Checked against live Postgres | Result |
+## Putting it on a host
+
+Any platform that runs a Python process and gives you a Postgres database will
+do — Render, Railway and Fly.io all have free or near-free tiers that fit.
+
+**1. Create a Postgres database** on the platform, or use the Supabase project
+already set up. Apply the migrations in order:
+
+```bash
+psql "$DATABASE_URL" -f backend/migrations/0001_init.sql
+psql "$DATABASE_URL" -f backend/migrations/0002_standalone_auth.sql
+psql "$DATABASE_URL" -f backend/migrations/0003_epoch_times.sql
+```
+
+**2. Check them** before going further:
+
+```bash
+GC_DSN="$DATABASE_URL" python3 backend/tests/test_postgres_rls.py
+```
+
+Fifteen checks, non-zero exit if any fails.
+
+**3. Create the first admin.** There is deliberately no way to do this through
+the app:
+
+```bash
+GREENCORD_DATABASE_URL="$DATABASE_URL" python3 tools/provision-counselor.py \
+    --db unused --name "Green Cord Coordinator" --username counselor
+```
+
+It prompts for a password. Everyone else is added from inside the app by that
+admin.
+
+**4. Run the server.** The platform terminates TLS and forwards plain HTTP
+internally, so:
+
+```
+Build:  pip install "psycopg[binary]"
+Start:  python3 backend/server.py --no-tls --bind 0.0.0.0 --port $PORT
+Env:    GREENCORD_DATABASE_URL = <the database URL>
+```
+
+`--no-tls` is only correct behind a proxy that terminates TLS. Never run it
+exposed directly.
+
+**5. Point the app at it** and rebuild:
+
+```bash
+GREENCORD_BACKEND_URL=https://your-app.onrender.com \
+GREENCORD_TEAM_ID=... GREENCORD_BUNDLE_ID=... \
+  python3 tools/generate_xcodeproj.py
+```
+
+### One thing that will bite
+
+The server keeps a single database connection behind a lock, and tells Postgres
+who is acting with a session-wide `set_config`. That is correct for one process
+with one connection, and **wrong for a pooled or multi-process server**: a
+connection carrying the previous request's identity would answer the next
+request as that user — a student seeing someone else's hours.
+
+If you move to `gunicorn` with workers, or add a connection pool, change
+`Connection.set_account` in `backend/pg.py` to `SET LOCAL` inside the
+transaction serving each request. The comment there says so too.
+
+---
+
+## What was proven, and what it uncovered
+
+Kept because the reasoning matters more than the result, and because the next
+person will have the same questions.
+
+**Creating a Supabase project does not, by itself, deploy this app.** Supabase
+gives you a database, its own authentication and its own REST API. The app
+speaks none of those — it calls `POST /auth/login` and the rest of this
+project's own API. Supabase is useful here as *the database*, which is exactly
+how it is used above.
+
+**Applying the schema found three things reading it had not.**
+
+| | |
 | --- | --- |
-| Nobody signed in sees entries or accounts | 0 rows |
-| Student A sees only their own entries | own only |
-| Student A queries B's entries directly | 0 rows |
-| Manager and admin see every entry | all |
-| Student reads invite codes or password resets | 0 rows |
-| Manager reads password resets | 0 rows — admin only |
-| Student edits an approved entry | 0 rows changed |
-| Student promotes themselves to admin | refused by trigger |
+| Access rules on live Postgres | `anon` sees nothing; a student sees only their own entries; staff see all |
+| Authentication | 0001 delegated identity to `auth.users`; the server owns it. 0002 reconciles them |
+| Time | 0001 used `timestamptz`; the server and the iOS models exchange epoch seconds. 0003 aligns them |
 
-So the architectural question is closed and the database layer is proven. What
-remains for option 1 is the mechanical part: swapping `sqlite3` for `psycopg`
-in `backend/db.py`, converting `?` placeholders to `%s`, and the three
-SQLite-isms listed below. The server must issue `SET LOCAL greencord.account_id`
-inside the transaction serving each request — **`SET LOCAL`, never `SET`**, or a
-pooled connection will answer the next request as the previous user.
+**And running it found five more**, each caught by a test rather than by
+inspection: SQLite's missing boolean type, a trigger still writing `now()` into
+a converted column, `jsonb` arriving already decoded, a literal `%` colliding
+with placeholders, and an audit log protected by rules that silently discarded
+tampering where SQLite raises.
 
-For the record, the two options were:
-
-1. **Add `username`, `password_hash`, `password_salt` to the Postgres schema and
-   drop the `auth.users` foreign key.** Keeps the server's own auth, and every
-   policy's `auth.uid()` must be replaced with the server's session user. The 55
-   tests keep their meaning. Simpler, and gives up Supabase's auth entirely.
-2. **Move the server onto Supabase auth.** Sign-up, sign-in, password reset and
-   invite redemption all go through Supabase. Policies stay as written. More
-   work, and the invite-code model — where an admin names a student and the code
-   carries their identity — has to be rebuilt on top of Supabase's sign-up flow.
-
-Either is a day or more, and neither is a driver swap. The estimate in the next
-section was written before this was discovered and was too optimistic.
+That last one is the one to remember. The rows were never at risk, but the
+guarantee was weaker than the documentation claimed, and only executing it
+showed that. **A schema that has been reviewed is not a schema that works.**
 
 ---
 
-## The mistake to avoid
+## Option A — the Python server on Postgres (what was built)
 
-**Creating a Supabase project does not deploy this app.**
+The app keeps working unchanged. `backend/pg.py` is a SQLite-shaped interface
+over psycopg, so `server.py` was not rewritten at nineteen call sites; it
+translates `?` to `%s`, `BEGIN IMMEDIATE` to `BEGIN`, `COLLATE NOCASE` to
+`lower()`, and converts the types the two databases disagree about — uuid,
+numeric, date and jsonb — into the strings and numbers the API already returns.
 
-Supabase gives you a Postgres database, its own authentication, and its own REST
-API generated from your tables. The app does not speak any of those. Pointing the
-app at a Supabase URL would fail on the first request, because `POST /auth/login`
-is not an endpoint Supabase serves.
-
-The Postgres schema in `backend/migrations/` is real and worth keeping — it is
-the authoritative statement of the access rules, and the SQLite server mirrors
-it. But it is a *specification*, not a running system.
-
----
-
-## Option A — host the Python server (recommended)
-
-The app keeps working unchanged. This is the shorter path.
-
-**Why it is not trivial:** `backend/db.py` uses SQLite, and hosting platforms
-give you a container whose disk is wiped on every redeploy. Shipping as-is would
-lose every student's hours on each deploy. So the server has to move to Postgres
-first.
-
-### What has to change
-
-1. **Swap the driver.** `backend/db.py` line 16 imports `sqlite3`. Replace with
-   `psycopg` (v3). The connection helper is one function, `db.connect()`.
-
-2. **Parameter style.** SQLite uses `?`, Postgres uses `%s`. About 19 call sites
-   across `backend/server.py`. Mechanical, but every one has to be right —
-   a missed one is a runtime error on a path a test may not cover.
-
-3. **Three SQLite-isms** in `backend/server.py`:
-   - `BEGIN IMMEDIATE` (3 uses) → `BEGIN` with `SELECT ... FOR UPDATE`, or rely
-     on the `UPDATE ... WHERE redeemed_by IS NULL` lock already in place
-   - `COLLATE NOCASE` (3 uses) → `LOWER(...)` or a `citext` column
-   - `ON CONFLICT ... DO UPDATE` (1 use) → same syntax in Postgres, verify it
-   - `INTEGER PRIMARY KEY AUTOINCREMENT` in the audit table → `BIGSERIAL`
-
-4. **Run the migration.** `backend/migrations/0001_init.sql` against the real
-   database. It has never been executed. Budget real time here: 300 lines of
-   policies, triggers and `SECURITY DEFINER` functions, and the first run of any
-   migration finds problems.
-
-   Note it assumes Supabase's `auth.users` table and `auth.uid()`. On plain
-   Postgres, replace `auth.uid()` with your own session-user function — there is
-   a comment at the top of the file saying so.
-
-5. **Serve it properly.** `server.py` uses Python's `ThreadingHTTPServer`, which
-   is fine for a prototype and not for the open internet. Put it behind
-   `gunicorn` or `uvicorn`, and let the platform terminate TLS — delete the
-   self-signed certificate handling, which exists only so the laptop prototype
-   never speaks plain HTTP.
-
-6. **Point the app at it.** One value:
-   `GREENCORD_BACKEND_URL=https://your-host.example.com`, passed to
-   `tools/generate_xcodeproj.py`. See `PHONE.md`.
-
-### Where to host
-
-Render, Railway and Fly.io all have free or near-free tiers that fit this. All
-three give you a Postgres database alongside the app, so you may not need
-Supabase at all. Whichever you pick, the thing that matters is **a database
-whose disk survives a redeploy**.
-
-### Effort
-
-A focused day if nothing surprises you. Two is more realistic, because the
-migration has never run.
+Done. See *Putting it on a host* above for what remains.
 
 ---
 
@@ -227,13 +180,14 @@ pretending otherwise helps nobody.
 
 ## If you only do one thing
 
-Apply both migrations to a database and run the access-rule test:
+Run both suites against whatever database you intend to use, before trusting it
+with anyone's record:
 
 ```bash
-psql "$DATABASE_URL" -f backend/migrations/0001_init.sql
-psql "$DATABASE_URL" -f backend/migrations/0002_standalone_auth.sql
 GC_DSN="$DATABASE_URL" python3 backend/tests/test_postgres_rls.py
+GREENCORD_DATABASE_URL="$DATABASE_URL" python3 backend/tests/test_backend.py
 ```
 
-Fifteen checks, and it exits non-zero if any fails. If that passes, the database
-half of deployment is done and what is left is the Python driver swap.
+Fifteen access-rule checks and 55 behaviour tests. Both exit non-zero on
+failure. If they pass, the system works on that database — which is a different
+and much stronger claim than the schema having been reviewed.

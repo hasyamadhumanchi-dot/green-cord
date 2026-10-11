@@ -111,10 +111,10 @@ with no admin, so the order is enforced. `RUNBOOK.md` has the sequence.
 
 Not a wish list — the things someone will trip over.
 
-- **No hosted backend.** The app talks to a server that runs on a laptop and
-  stores data in SQLite. `DEPLOY.md` sets out what changing that involves,
-  including an authentication mismatch between the server and the Postgres
-  schema that is the real obstacle.
+- **No hosted backend.** The server now runs on Postgres as well as SQLite,
+  with all 55 tests passing against a hosted database, so the code is ready.
+  What is missing is a host: somewhere always-on to run the process. `DEPLOY.md`
+  has the steps, and they are configuration rather than engineering.
 - **Photo evidence is a marker, not an image.** Attaching a photo records *that*
   a form was attached. The image never leaves the phone, so a reviewer cannot
   see it. Real storage needs a hosted backend first.
