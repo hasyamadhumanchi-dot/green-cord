@@ -114,7 +114,14 @@ over a real HTTPS socket.
 
 ## Blocked
 
-**B1 — migrations applied to a fresh Postgres database.**
+**B1 — migrations applied to a fresh Postgres database.** — **NOW DONE.** The
+migration was applied to a live Supabase Postgres 17 database: 7 tables, 7 with
+row-level security, 15 policies, 8 functions, 3 triggers. Access was then tested
+by connecting as `anon` and as a signed-in student: a student sees their own
+hour entry and not another student's, and `anon` sees nothing in any table. See
+`DEPLOY.md`. The note below describes why it could not be done at the time.
+
+**B1 (original note) — migrations applied to a fresh Postgres database.**
 
 ```
 $ for c in psql postgres initdb docker brew; do command -v $c || echo "$c MISSING"; done

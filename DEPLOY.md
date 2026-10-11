@@ -16,12 +16,72 @@ option is not the one that works.
 | --- | --- |
 | iOS app | Done. Talks to a custom API over HTTPS. |
 | API server | `backend/server.py` — complete, 55 tests, **stores data in SQLite** |
-| Postgres schema | `backend/migrations/0001_init.sql` — written, mirrors every rule, **never run** |
+| Postgres schema | `backend/migrations/0001_init.sql` — **applied to a real Supabase database and verified**, see below |
 | Hosting | None. The server runs on your Mac. |
 
 The app calls endpoints like `POST /auth/login`, `GET /entries`, `GET /roster`,
 `POST /staff/invites`. Those are this project's own API, defined in
 `backend/server.py`. Nothing else serves them.
+
+---
+
+## What has now been proven
+
+The migration was applied to a live Supabase Postgres 17 database and checked.
+
+| Check | Result |
+| --- | --- |
+| Migration applies cleanly | yes, all 405 lines |
+| Tables created | 7 |
+| Tables with row-level security | **7 of 7** |
+| Policies | 15 |
+| Functions / triggers | 8 / 3 |
+| Roles in the enum | `student, manager, admin` |
+
+Then the rules were attacked rather than admired. With two students seeded, one
+hour entry each:
+
+| Connecting as | `hour_entries` visible |
+| --- | --- |
+| `anon` — the key that ships inside the app | **0** |
+| `authenticated`, no identity | **0** |
+| signed in as student A | **1** — their own, not B's |
+
+The same held for `accounts`, `invite_codes` and `audit_log`. **A student cannot
+read another student's hours**, and that is now true of the production schema and
+not only of the SQLite server.
+
+This was the largest unknown in the project. It is closed.
+
+---
+
+## The gap this uncovered
+
+The Postgres schema and the Python server **do not share an authentication
+model**, and this is the real obstacle to Option A below.
+
+- `accounts.id` in Postgres is `REFERENCES auth.users(id)`. Identity belongs to
+  Supabase: no row can exist in `accounts` without a Supabase auth user, and
+  every policy is written against `auth.uid()`.
+- `backend/db.py` implements its own: `accounts` carries `username`,
+  `password_hash` and `password_salt`, and `POST /auth/login` checks them.
+
+The Postgres `accounts` table has no `username` column at all. Pointing the
+existing server at this schema fails immediately on sign-in.
+
+So "port the server to Postgres" means choosing one of:
+
+1. **Add `username`, `password_hash`, `password_salt` to the Postgres schema and
+   drop the `auth.users` foreign key.** Keeps the server's own auth, and every
+   policy's `auth.uid()` must be replaced with the server's session user. The 55
+   tests keep their meaning. Simpler, and gives up Supabase's auth entirely.
+2. **Move the server onto Supabase auth.** Sign-up, sign-in, password reset and
+   invite redemption all go through Supabase. Policies stay as written. More
+   work, and the invite-code model — where an admin names a student and the code
+   carries their identity — has to be rebuilt on top of Supabase's sign-up flow.
+
+Either is a day or more, and neither is a driver swap. The estimate in the next
+section was written before this was discovered and was too optimistic.
 
 ---
 
@@ -136,13 +196,8 @@ pretending otherwise helps nobody.
 
 ## If you only do one thing
 
-Run the migration against a throwaway Postgres database and fix what breaks.
+Decide which authentication model you want — the server's own, or Supabase's —
+before writing any code. Everything else follows from it, and doing it in the
+wrong order means rewriting the access rules twice.
 
-```bash
-createdb greencord_test
-psql greencord_test -f backend/migrations/0001_init.sql
-```
-
-Until that has been done once, nobody knows whether the production schema is
-correct — it has been written and reviewed, but never executed. It is the single
-largest unknown in this project.
+The schema itself is proven. What is not settled is who owns identity.
