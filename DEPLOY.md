@@ -32,6 +32,61 @@ GREENCORD_DATABASE_URL=postgresql://... python3 backend/server.py --port 8443
 
 ---
 
+## The short way: Render
+
+The repository carries `render.yaml`, so Render can read the whole setup rather
+than being told it.
+
+1. **render.com** → **New** → **Blueprint**
+2. Connect this repository and confirm
+3. Render creates the Postgres database, creates the web service, and links them
+
+Both are free tier. The database sleeps after a quiet spell and wakes on the
+next request, so the first load after a week is slow. That is fine for this.
+
+### After the first deploy
+
+**Apply the migrations.** Render shows the database's connection string under
+its *Info* tab:
+
+```bash
+psql "$DATABASE_URL" -f backend/migrations/0001_init.sql
+psql "$DATABASE_URL" -f backend/migrations/0002_standalone_auth.sql
+psql "$DATABASE_URL" -f backend/migrations/0003_epoch_times.sql
+```
+
+**Check them**, before anyone's record goes near it:
+
+```bash
+GC_DSN="$DATABASE_URL" python3 backend/tests/test_postgres_rls.py
+```
+
+**Create the first admin.** There is deliberately no way to do this through the
+app, so it happens here, once:
+
+```bash
+GREENCORD_DATABASE_URL="$DATABASE_URL" python3 tools/provision-counselor.py \
+    --db unused --name "Green Cord Coordinator" --username counselor
+```
+
+It prompts for a password. Give that to the counselor and have her change it -
+she can issue herself a reset from inside the app. Everyone else she adds
+herself.
+
+**Point the app at it** and rebuild:
+
+```bash
+GREENCORD_BACKEND_URL=https://greencord-api.onrender.com \
+GREENCORD_TEAM_ID=... GREENCORD_BUNDLE_ID=... \
+  python3 tools/generate_xcodeproj.py
+```
+
+This whole sequence has been run end to end against a real hosted Postgres: an
+empty database, the migrations, the admin created by the script, the server
+started with `--no-tls`, and that admin signing in through the API.
+
+---
+
 ## Putting it on a host
 
 Any platform that runs a Python process and gives you a Postgres database will

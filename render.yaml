@@ -1,0 +1,36 @@
+# Render reads this file when you connect the repository, so deploying is
+# "connect repo, confirm, wait" rather than working the commands out by hand.
+#
+#   1. render.com -> New -> Blueprint
+#   2. Connect this repository
+#   3. Render creates the database and the service and links them
+#   4. When it is live, follow "After the first deploy" in DEPLOY.md to create
+#      the first admin account - there is deliberately no way to do it through
+#      the app
+#
+# Both services below are free tier. The database sleeps after inactivity and
+# wakes on the next request, which is fine for a school program and means the
+# first load after a quiet week is slow.
+
+databases:
+  - name: greencord-db
+    databaseName: greencord
+    plan: free
+
+services:
+  - type: web
+    name: greencord-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    # --no-tls because Render terminates TLS at its edge and forwards plain
+    # HTTP internally. Never run this flag on a server exposed directly.
+    startCommand: python3 backend/server.py --no-tls --bind 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: GREENCORD_DATABASE_URL
+        fromDatabase:
+          name: greencord-db
+          property: connectionString
+      - key: PYTHON_VERSION
+        value: "3.11"
