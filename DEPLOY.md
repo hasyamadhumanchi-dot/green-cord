@@ -16,7 +16,7 @@ option is not the one that works.
 | --- | --- |
 | iOS app | Done. Talks to a custom API over HTTPS. |
 | API server | `backend/server.py` — complete, 55 tests, **stores data in SQLite** |
-| Postgres schema | `backend/migrations/0001_init.sql` — **applied to a real Supabase database and verified**, see below |
+| Postgres schema | `0001_init.sql` + `0002_standalone_auth.sql` — **applied to a real database, 15 access-rule checks passing** |
 | Hosting | None. The server runs on your Mac. |
 
 The app calls endpoints like `POST /auth/login`, `GET /entries`, `GET /roster`,
@@ -69,7 +69,38 @@ model**, and this is the real obstacle to Option A below.
 The Postgres `accounts` table has no `username` column at all. Pointing the
 existing server at this schema fails immediately on sign-in.
 
-So "port the server to Postgres" means choosing one of:
+**This has now been resolved, and option 1 below is built and tested.**
+`backend/migrations/0002_standalone_auth.sql` applies on top of 0001 and moves
+identity to the server: it adds `username`, `password_hash` and `password_salt`
+to `accounts`, drops the `auth.users` foreign key, and replaces `auth.uid()`
+with `app_uid()`, which reads an account id the server sets per request:
+
+```sql
+SET LOCAL greencord.account_id = '<the signed-in account id>';
+```
+
+`backend/tests/test_postgres_rls.py` then checks the rules against the real
+database. All 15 checks pass:
+
+| Checked against live Postgres | Result |
+| --- | --- |
+| Nobody signed in sees entries or accounts | 0 rows |
+| Student A sees only their own entries | own only |
+| Student A queries B's entries directly | 0 rows |
+| Manager and admin see every entry | all |
+| Student reads invite codes or password resets | 0 rows |
+| Manager reads password resets | 0 rows — admin only |
+| Student edits an approved entry | 0 rows changed |
+| Student promotes themselves to admin | refused by trigger |
+
+So the architectural question is closed and the database layer is proven. What
+remains for option 1 is the mechanical part: swapping `sqlite3` for `psycopg`
+in `backend/db.py`, converting `?` placeholders to `%s`, and the three
+SQLite-isms listed below. The server must issue `SET LOCAL greencord.account_id`
+inside the transaction serving each request — **`SET LOCAL`, never `SET`**, or a
+pooled connection will answer the next request as the previous user.
+
+For the record, the two options were:
 
 1. **Add `username`, `password_hash`, `password_salt` to the Postgres schema and
    drop the `auth.users` foreign key.** Keeps the server's own auth, and every
@@ -196,8 +227,13 @@ pretending otherwise helps nobody.
 
 ## If you only do one thing
 
-Decide which authentication model you want — the server's own, or Supabase's —
-before writing any code. Everything else follows from it, and doing it in the
-wrong order means rewriting the access rules twice.
+Apply both migrations to a database and run the access-rule test:
 
-The schema itself is proven. What is not settled is who owns identity.
+```bash
+psql "$DATABASE_URL" -f backend/migrations/0001_init.sql
+psql "$DATABASE_URL" -f backend/migrations/0002_standalone_auth.sql
+GC_DSN="$DATABASE_URL" python3 backend/tests/test_postgres_rls.py
+```
+
+Fifteen checks, and it exits non-zero if any fails. If that passes, the database
+half of deployment is done and what is left is the Python driver swap.
