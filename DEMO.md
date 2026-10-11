@@ -1,4 +1,4 @@
-# The ten-minute demo
+# The demo script
 
 A script for showing the prototype to the Green Cord Coordinator. It goes from a
 student with nothing logged to a counselor with an exported spreadsheet, and it
@@ -67,7 +67,8 @@ Sign-ins:
 
 | | Username | Password |
 | --- | --- | --- |
-| Counselor | `counselor` | `counselorpass1` |
+| Admin (the counselor) | `counselor` | `counselorpass1` |
+| Manager (Sam Okafor, a second reviewer) | `sam.okafor` | `managerpass1` |
 | Alpha Alderwood (grade 9, nothing logged) | `alpha.alderwood` | `demopassword1` |
 | Lima Larchmont (grade 12, finished) | `lima.larchmont` | `demopassword1` |
 
@@ -212,7 +213,51 @@ Scroll to **Not signed up yet**.
 > moment you add them, marked 'Not joined', so you're never guessing whether a
 > student is behind or just hasn't opened the app."
 
-### 6. What a student cannot see — 1 minute
+### 6. Sharing the work, and leaving — 3 minutes
+
+*On the iPad.* This is the part she asked for after the last demo, so give it
+room.
+
+**Home → Staff & access.**
+
+> "You said you didn't want to be the only person who can approve hours, and you
+> wanted a way to hand this over if you leave. This is both."
+
+Point at the two people listed — herself as **Admin**, Sam Okafor as **Manager**.
+
+> "A manager does everything you do with students: approves hours, adds people,
+> hands out codes, sees the roster. What they can't do is change who has access.
+> That's only you."
+
+Add someone: type a name, leave it on **Manager**, tap **Create their invite
+code**.
+
+> "They get a code, same as a student, and they set their own password when they
+> use it. You never see it — which matters, because you shouldn't be holding
+> other staff members' passwords."
+
+Now the part about leaving. Point at **Make admin** beside Sam.
+
+> "If you're leaving the district, you make your replacement an admin first, then
+> step yourself down or remove yourself. The order matters, and the app enforces
+> it — it won't let you remove the last admin, because that would lock everyone
+> out of the program permanently."
+
+Try it if she wants proof: tap **Make manager** on her own row while she's the
+only admin. It refuses, and says why.
+
+> "And everything you approved stays approved, still with your name on it. An
+> approval is a record of who checked the work — that shouldn't disappear
+> because you changed schools."
+
+**Then the one that saves you phone calls.** Tap **Reset password** beside
+anyone.
+
+> "When a student forgets their password — and they will — you issue them one of
+> these instead of calling me. It works once, lasts two days, and signs them out
+> of anywhere they were already logged in."
+
+### 7. What a student cannot see — 1 minute
 
 *Back on the iPhone.*
 

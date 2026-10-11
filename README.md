@@ -111,8 +111,10 @@ Store.**
 
 What that would take, honestly:
 
-- A hosted backend — the Postgres schema is written and mirrored, but has not
-  been applied to a live database
+- A hosted backend. The app talks to this project's own API, served by
+  `backend/server.py`, which stores data in SQLite. Running it for real means
+  moving it to Postgres and hosting it — [`DEPLOY.md`](DEPLOY.md) sets out what
+  that involves and why creating a Supabase project alone would not be enough.
 - Written district authorization to use the name, the panther mark and student
   records
 - Photo evidence currently records *that* a form was attached, not the image
