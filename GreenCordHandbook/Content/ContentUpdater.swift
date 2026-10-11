@@ -61,6 +61,14 @@ actor ContentUpdater {
 
     @discardableResult
     func checkForUpdate() async -> Outcome {
+        // Only the unparseable-placeholder case is handled here. A plain-http
+        // URL is a different thing entirely - it is refused further down, with
+        // a reason saying so, because silently calling it "unreachable" would
+        // hide a security decision behind a network message.
+        if manifestURL.isFileURL {
+            return .unreachable(reason: "no content update URL is configured")
+        }
+
         let localVersion = store.currentVersion()
         do {
             let manifest = try await fetchManifest()

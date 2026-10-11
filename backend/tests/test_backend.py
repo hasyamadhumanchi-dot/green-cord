@@ -1087,12 +1087,23 @@ def t_no_secrets():
         (re.compile(r"-----BEGIN [A-Z ]*PRIVATE KEY-----"), "private key"),
         (re.compile(r"AKIA[0-9A-Z]{16}"), "AWS access key"),
     ]
+    # Files whose job is to define or document the patterns above. Without this
+    # the scan matches its own source, which is a false positive that would
+    # train whoever maintains this to ignore the check.
+    detectors = {
+        "backend/tests/test_backend.py",
+        "tools/check_quality.py",
+        "GATES.md",
+    }
+
     hits = []
     for relative in tracked:
         path = os.path.join(ROOT, relative)
         if not os.path.isfile(path) or os.path.getsize(path) > 2_000_000:
             continue
         if relative.endswith((".pdf", ".png", ".jpg", ".db")):
+            continue
+        if relative in detectors:
             continue
         try:
             text = open(path, encoding="utf-8", errors="ignore").read()

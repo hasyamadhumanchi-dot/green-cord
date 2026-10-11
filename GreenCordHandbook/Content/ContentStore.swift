@@ -6,9 +6,19 @@ import Foundation
 /// until the school webmaster confirms a writable path - see
 /// `content/source-of-truth.md`. Only this one value needs to change.
 enum ContentSource {
+    /// Not force-unwrapped. The literal below is valid, but this value is the
+    /// one thing in the app a future maintainer is most likely to edit, and a
+    /// typo here would otherwise crash every launch rather than just stop
+    /// content updates.
     static let manifestURL = URL(
         string: "https://pshs.princetonisd.net/greencord-app-content/manifest.json"
-    )!
+    ) ?? URL(fileURLWithPath: "/dev/null")
+
+    /// False when `manifestURL` could not be parsed, so the updater can skip
+    /// the check instead of fetching nonsense.
+    static var hasUsableManifestURL: Bool {
+        manifestURL.scheme == "https"
+    }
 
     /// Bumped only when the *shape* of the content changes. A manifest declaring
     /// a schemaVersion this build does not understand is ignored rather than
@@ -129,14 +139,28 @@ final class ContentStore {
     /// The content the app should show: the downloaded copy when there is a
     /// valid, newer one, otherwise the copy that shipped in the app.
     func load() -> LoadedContent {
-        if let downloaded = try? loadDownloaded() {
-            if ContentVersion.isNewer(downloaded.contentVersion, than: bundledVersion()) {
-                return downloaded
-            }
+        let downloaded = try? loadDownloaded()
+
+        if let downloaded,
+           ContentVersion.isNewer(downloaded.contentVersion, than: bundledVersion()) {
+            return downloaded
         }
-        // Force-unwrapped on purpose: an app that cannot read its own bundled
-        // handbook is broken beyond anything a fallback could rescue, and the
-        // bundled-resource test catches it long before a build ships.
+
+        if let bundled = try? loadBundled() {
+            return bundled
+        }
+
+        // The bundled copy is unreadable - a corrupt or mis-built app. Anything
+        // previously downloaded is better than nothing, even if it is older.
+        if let downloaded {
+            return downloaded
+        }
+
+        // Nothing readable at all. This is force-unwrapped so the failure is
+        // loud rather than silently showing an empty handbook: at this point
+        // the app has no content of any kind and the build itself is broken.
+        // `ContentTests` reads the bundled files on every test run, so a build
+        // that would land here cannot pass CI.
         return try! loadBundled()
     }
 
