@@ -58,6 +58,17 @@ ENTRY_FIELDS = (
 )
 
 
+def _decode_json(value):
+    """SQLite stores these columns as text, Postgres as jsonb.
+
+    psycopg has already decoded a jsonb column into a dict by the time it gets
+    here, so only the text form needs parsing.
+    """
+    if value is None or isinstance(value, (dict, list)):
+        return value
+    return json.loads(value)
+
+
 class HttpError(Exception):
     def __init__(self, status, message, code=None):
         super().__init__(message)
@@ -94,6 +105,11 @@ class Service:
         account = db.account_for_token(self.conn, token)
         if account is None:
             raise HttpError(401, "Not signed in", "unauthenticated")
+        # Postgres only: the schema's triggers and policies ask who is acting,
+        # and they have no other way to find out. A no-op under SQLite.
+        setter = getattr(self.conn, "set_account", None)
+        if setter:
+            setter(account["id"])
         return account
 
     STAFF_ROLES = ("manager", "admin")
@@ -445,11 +461,11 @@ class Service:
             ).fetchone()
             if student is None:
                 raise HttpError(404, "No such student", "not_found")
-            counselor_entered = 1
+            counselor_entered = True
             status = "submitted"
         else:
             student_id = account["id"]
-            counselor_entered = 0
+            counselor_entered = False
             status = "draft"
 
         entry_id = db.new_id()
@@ -620,8 +636,8 @@ class Service:
                     "actorName": e["display_name"],
                     "actorRole": e["actor_role"],
                     "action": e["action"],
-                    "before": json.loads(e["before_json"]) if e["before_json"] else None,
-                    "after": json.loads(e["after_json"]) if e["after_json"] else None,
+                    "before": _decode_json(e["before_json"]),
+                    "after": _decode_json(e["after_json"]),
                 }
                 for e in events
             ]
@@ -1199,7 +1215,8 @@ class Service:
         known = {item["id"] for item in self.requirements["checklist"]}
         if item_id not in known:
             raise HttpError(404, "No such checklist item", "not_found")
-        checked = 1 if payload.get("checked") else 0
+        # A real bool, not 0/1: SQLite stores either, Postgres only the bool.
+        checked = bool(payload.get("checked"))
         self.conn.execute(
             "INSERT INTO checklist_state (account_id, item_id, checked, updated_at)"
             " VALUES (?,?,?,?) ON CONFLICT(account_id, item_id)"
@@ -1220,11 +1237,11 @@ ROUTES = [
     ("DELETE", r"^/me$",                     "delete_me"),
     ("GET",    r"^/entries$",                "list_entries"),
     ("POST",   r"^/entries$",                "create_entry"),
-    ("PATCH",  r"^/entries/([0-9a-f]+)$",    "update_entry"),
-    ("DELETE", r"^/entries/([0-9a-f]+)$",    "delete_entry"),
-    ("POST",   r"^/entries/([0-9a-f]+)/submit$",  "submit_entry"),
-    ("POST",   r"^/entries/([0-9a-f]+)/decision$", "decide_entry"),
-    ("GET",    r"^/entries/([0-9a-f]+)/history$", "entry_history"),
+    ("PATCH",  r"^/entries/([0-9a-f-]+)$",    "update_entry"),
+    ("DELETE", r"^/entries/([0-9a-f-]+)$",    "delete_entry"),
+    ("POST",   r"^/entries/([0-9a-f-]+)/submit$",  "submit_entry"),
+    ("POST",   r"^/entries/([0-9a-f-]+)/decision$", "decide_entry"),
+    ("GET",    r"^/entries/([0-9a-f-]+)/history$", "entry_history"),
     ("GET",    r"^/progress$",               "progress"),
     ("GET",    r"^/roster$",                 "roster"),
     ("GET",    r"^/roster\.csv$",            "roster_csv"),

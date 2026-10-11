@@ -125,6 +125,21 @@ CREATE POLICY checklist_self ON checklist_state
     FOR ALL USING (account_id = app_uid() OR is_staff())
     WITH CHECK (account_id = app_uid());
 
+-- ---------------------------------------------------------------- sessions
+
+-- 0001 had no sessions table: Supabase issued the tokens. With the server
+-- owning identity it issues its own, so it needs somewhere to keep them.
+CREATE TABLE IF NOT EXISTS sessions (
+    token      text PRIMARY KEY,
+    account_id uuid NOT NULL REFERENCES accounts(id),
+    created_at double precision NOT NULL,
+    expires_at double precision NOT NULL
+);
+
+ALTER TABLE sessions ENABLE ROW LEVEL SECURITY;
+-- No policy at all: only the server, connecting as the owning role, touches
+-- this table. Nothing holding the public key should ever read a session token.
+
 -- -------------------------------------------------------------- redemption
 
 -- 0001's redeem_invite_code() creates the account as auth.uid(). With the
