@@ -21,12 +21,11 @@ with psycopg.connect(DSN, connect_timeout=25) as conn:
     conn.autocommit = True
     with conn.cursor() as cur:
         # Clean slate, as the owner (RLS does not apply to the table owner).
-        cur.execute("delete from approvals")
-        cur.execute("delete from audit_log")
-        cur.execute("delete from hour_entries")
-        cur.execute("delete from checklist_state")
-        cur.execute("delete from invite_codes")
-        cur.execute("delete from accounts")
+        # TRUNCATE rather than DELETE: audit_log refuses row deletes by design,
+        # and truncation bypasses row triggers.
+        cur.execute("truncate approvals, audit_log, hour_entries, checklist_state,"
+                    " password_resets, invite_codes, sessions, accounts"
+                    " restart identity cascade")
 
         def mk(role, name, grade, username):
             cur.execute("""insert into accounts (role, display_name, last_name, grade,

@@ -1126,6 +1126,19 @@ def main():
     workdir = tempfile.mkdtemp(prefix="greencord-tests-")
     db_path = os.path.join(workdir, "test.db")
 
+    # SQLite gets a fresh file per run. Postgres does not, so empty it - these
+    # tests assume nothing exists yet, and a leftover admin or username from a
+    # previous run would fail them for the wrong reason.
+    if db.database_url():
+        import pg
+        conn = pg.connect(db.database_url())
+        conn.execute(
+            "truncate approvals, audit_log, hour_entries, checklist_state,"
+            " password_resets, invite_codes, sessions, accounts restart identity cascade"
+        )
+        conn.close()
+        print(f"postgres: emptied {db.database_url().split('@')[-1].split('/')[0]}")
+
     provision = subprocess.run(
         [sys.executable, os.path.join(ROOT, "tools", "provision-counselor.py"),
          "--db", db_path, "--username", "counselor", "--password", "counselorpass1"],

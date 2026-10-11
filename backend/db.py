@@ -14,6 +14,7 @@ import json
 import os
 import secrets
 import sqlite3
+import uuid
 import time
 
 # Codes a student has to copy off a paper slip: no 0/O/1/I/L, no vowels that make
@@ -163,10 +164,23 @@ CREATE TABLE IF NOT EXISTS checklist_state (
 """
 
 
+def database_url():
+    """The Postgres connection string, when one is configured.
+
+    Set GREENCORD_DATABASE_URL to run against Postgres; leave it unset and the
+    prototype keeps using SQLite. Nothing else in the server changes.
+    """
+    return os.environ.get("GREENCORD_DATABASE_URL", "").strip() or None
+
+
 def connect(path):
     # The HTTP server handles each request on its own thread. Every database
     # call is serialised by Service.lock, so one shared connection is both safe
     # and simpler than a connection pool at this size.
+    dsn = database_url()
+    if dsn:
+        import pg
+        return pg.connect(dsn)
     conn = sqlite3.connect(path, timeout=15, isolation_level=None, check_same_thread=False)
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA foreign_keys = ON")
@@ -175,12 +189,18 @@ def connect(path):
 
 def init(path):
     conn = connect(path)
-    conn.executescript(SCHEMA)
+    # Postgres owns its schema through backend/migrations; only SQLite builds
+    # its tables at startup.
+    if not database_url():
+        conn.executescript(SCHEMA)
     return conn
 
 
 def new_id():
-    return secrets.token_hex(16)
+    # A real UUID rather than 32 loose hex characters: Postgres stores these in
+    # uuid columns, which will not accept the undashed form. SQLite does not
+    # care either way, so both backends use the same shape.
+    return str(uuid.uuid4())
 
 
 def hash_password(password, salt=None):
